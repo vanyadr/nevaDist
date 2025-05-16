@@ -30,7 +30,7 @@
 }
 .hero {
     padding-top: 5rem;
-    margin-bottom: 8rem;
+    margin-bottom: 9rem;
     row-gap: 0.4rem;
     // .hero__slider
     &__slider {
@@ -75,7 +75,8 @@
         top: 1rem;
         width: 16.5rem;
     }
-    &__slide--1-sale, &__slide--2-sale {
+    &__slide--1-sale, 
+    &__slide--2-sale {
         border: 1px solid rgba(255, 255, 255, 0.56);
         border-radius: 20px;
         width: 100%;
@@ -86,12 +87,14 @@
         padding: .6rem .6rem .8rem 1.2rem;
     }
     // .hero__slide--1-icon
-    &__slide--1-icon, &__slide--2-icon {
+    &__slide--1-icon, 
+    &__slide--2-icon {
         width: 1.6rem;
         align-self: flex-end;
     }
     // .hero__slide--1-title
-    &__slide--1-title, &__slide--2-title {
+    &__slide--1-title, 
+    &__slide--2-title {
         color: #fff;
     }
     &__slide--1-title-1 {
@@ -103,9 +106,11 @@
         margin-bottom: .8rem;
     }
     // .hero__slide--1-desc
-    &__slide--1-desc, &__slide--2-desc {
-        color: #fff;
+    &__slide--1-desc, 
+    &__slide--2-desc {
+        color: rgba(#fff, .8);
         font-size: .8rem;
+        line-height: 1.2;
     }
     &__slide--2-sales {
         display: grid;
@@ -162,9 +167,9 @@
     }
     &__slide--2-subtitle,
     &__slide--3-subtitle {
-        font-weight: 500;
+        font-weight: 400;
         font-size: .5rem;
-        color: #fff;
+        color: rgba(#fff, .7);
         padding-right: 0.1rem;
     }
     &__slide--3-subtitle {
@@ -256,5 +261,129 @@
         position: absolute;
         right: 1.2rem;
         bottom: 1.2rem;
+    }
+}
+.about {
+    margin-bottom: 9rem;
+
+    &__img {
+        grid-column: 1 / 8;
+    }
+    // .about__info
+    &__info {
+        grid-column: 8 / -1;
+        padding-left: 5rem;
+        align-self: center;
+    }
+    // .about__text
+    &__text {
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+    }
+    // .about__btn
+    &__btn {
+        border-color: #3D3126;
+        color: #3D3126;
+    }
+}
+.hits {
+    margin-bottom: 9rem;
+
+    // .hits__title
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+    &__cards-block--1 {
+        grid-column: 1 / 7;
+        display: grid;
+        grid: 1fr 1fr / 1fr 1fr;
+        gap: 0.4rem;
+    }
+    // .hits__card
+    &__card {
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        position: relative;
+    }
+    &__card:hover &__card--on-hover {
+        visibility: visible;
+        opacity: 1;
+    }
+    &__card-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #a98568;
+        border-radius: 10px;
+        padding: 0.8rem;
+        height: 100%;
+    }
+    &__cards-block--2>&__card-holder {
+        padding: 1.4rem;
+    }
+    &__card--on-hover {
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+        @include centerItem();
+        flex-direction: column;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility .3s, opacity .3s;
+    }
+    // .hits__name--on-hover
+    &__name--on-hover {
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: #fff;
+        line-height: 1.4;
+    }
+    // .hits__subname--on-hover
+    &__subname--on-hover {
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 0.6rem;
+    }
+    // .hits__price--on-hover
+    &__price--on-hover {
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        letter-spacing: -0.03em;
+        color: #fff;
+    }
+    // .hits__icon
+    &__icon {
+        align-self: flex-end;
+    }
+    &__icon img {
+        width: 1.6rem;
+    }
+    // .hits__pic
+    &__pic {
+        max-height: 14rem;
+    }
+    &__cards-block--2 &__pic {
+        max-height: none;
+    }
+    &__pic img {
+        width: auto;
+        height: 100%;
+    }
+    // .hits__name
+    &__name {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+    // .hits__cards-block--2
+    &__cards-block--2 {
+        grid-column: 7 / -1;
+        aspect-ratio: 1 / 1;
     }
 }

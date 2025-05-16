@@ -134,13 +134,16 @@ img {
 }
 
 .border-btn {
+  display: inline-block;
   font-size: 0.7rem;
   text-align: center;
   color: #fff;
+  min-width: 10.5rem;
   padding: 0.75rem 2rem;
   border: 1px solid #fff;
   border-radius: 10px;
   background: none;
+  transition: background-color 0.3s;
 }
 
 .border-btn:hover {
