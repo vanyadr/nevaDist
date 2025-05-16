@@ -1,0 +1,214 @@
+.hero {
+  padding-top: 5rem;
+  margin-bottom: 8rem;
+  row-gap: 0.4rem;
+}
+.hero__slider {
+  height: 35rem;
+  grid-column: 1/7;
+}
+.hero .slick-list {
+  height: 100%;
+}
+.hero .slick-list .slick-track {
+  height: 100%;
+}
+.hero .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  gap: 0.2rem;
+}
+.hero .slick-dots li {
+  font-size: 0.4rem;
+}
+.hero .slick-active .hero__bullet {
+  background: #3D3126;
+}
+.hero__slide {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.hero__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__slide--1-sales {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 16.5rem;
+}
+.hero__slide--1-sale, .hero__slide--2-sale {
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  border-radius: 20px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0.6rem 0.8rem 1.2rem;
+}
+.hero__slide--1-icon, .hero__slide--2-icon {
+  width: 1.6rem;
+  align-self: flex-end;
+}
+.hero__slide--1-title, .hero__slide--2-title {
+  color: #fff;
+}
+.hero__slide--1-title-1 {
+  margin-top: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+.hero__slide--1-title-2 {
+  margin-top: -0.8rem;
+  margin-bottom: 0.8rem;
+}
+.hero__slide--1-desc, .hero__slide--2-desc {
+  color: #fff;
+  font-size: 0.8rem;
+}
+.hero__slide--2-sales {
+  display: grid;
+  grid: 1fr 1fr/1fr 1fr;
+  grid-template-areas: "A A" "B C";
+  gap: 0.4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+.hero__slide--2-sale {
+  height: 100%;
+  justify-content: space-between;
+}
+.hero__slide--2-sale-1 {
+  grid-area: A;
+  padding: 0.8rem 0.8rem 1.2rem 1.4rem;
+}
+.hero__slide--2-sale-2 {
+  grid-area: B;
+  border: none;
+  backdrop-filter: none;
+  background: #3D3126;
+  padding: 0.8rem;
+}
+.hero__slide--2-sale-3 {
+  grid-area: C;
+  border: none;
+  backdrop-filter: none;
+  background: #f6e9d8;
+  padding: 0.8rem;
+}
+.hero__slide--2-sale-1 .hero__slide--2-icon {
+  width: 2.2rem;
+}
+.hero__slide--2-sale-2 .hero__slide--2-icon, .hero__slide--2-sale-3 .hero__slide--3-icon {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  align-self: auto;
+}
+.hero__slide--2-sale-2 .hero__slide--2-icon img, .hero__slide--2-sale-3 .hero__slide--3-icon img {
+  width: 1.6rem;
+}
+.hero__slide--2-title-1 {
+  margin-bottom: 1.6rem;
+}
+.hero__slide--2-subtitle, .hero__slide--3-subtitle {
+  font-weight: 500;
+  font-size: 0.5rem;
+  color: #fff;
+  padding-right: 0.1rem;
+}
+.hero__slide--3-subtitle {
+  color: #3D3126;
+}
+.hero__slide--2-desc, .hero__slide--3-desc {
+  padding-right: 21rem;
+}
+.hero__slide--2-pic, .hero__slide--3-pic {
+  width: 50%;
+  align-self: center;
+}
+.hero__slide--2-info, .hero__slide--3-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.hero__slide--2-price, .hero__slide--3-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.hero__slide--2-price-old, .hero__slide--3-price-old {
+  font-weight: 500;
+  font-size: 0.5rem;
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.79);
+  display: block;
+}
+.hero__slide--3-price-old {
+  color: #3D3126;
+}
+.hero__slide--2-price-new, .hero__slide--3-price-new {
+  font-weight: 600;
+  font-size: 16px;
+  color: #ff3737;
+  display: block;
+  padding-right: 0.25rem;
+}
+.hero__bullets {
+  grid-column: 1/7;
+}
+.hero__bullet {
+  width: 0.4rem;
+  height: 0.4rem;
+  background: none;
+  border: 1px solid #3D3126;
+  border-radius: 50%;
+}
+.hero__info {
+  grid-column: 7/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 8rem;
+  height: 100%;
+  border-radius: 20px;
+  background: #3D3126;
+  position: relative;
+}
+.hero__title {
+  color: #fff;
+  text-align: center;
+}
+.hero__desc {
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+.hero__btn {
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+}
+.hero__btn:hover {
+  color: #3D3126;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.hero__socials {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1.2rem;
+}
+
+/*# sourceMappingURL=home.css.map */
