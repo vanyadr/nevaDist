@@ -28,14 +28,44 @@
         @content;
     }
 }
+@mixin blockGap () {
+    margin-bottom: 9rem;
+    
+    @include pc {
+        margin-bottom: 8rem;
+    }
+    @include laptop {
+    
+    }
+    @include tablet {
+    
+    }
+    @include mobile {
+        
+    }
+}
+
 .hero {
     padding-top: 5rem;
-    margin-bottom: 9rem;
+    @include blockGap();
     row-gap: 0.4rem;
     // .hero__slider
     &__slider {
         height: 35rem;
         grid-column: 1 / 7;
+        
+        @include pc {
+            height: 34rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     .slick-list {
         height: 100%;
@@ -100,6 +130,19 @@
     &__slide--1-title-1 {
         margin-top: 0.8rem;
         margin-bottom: 2.5rem;
+        
+        @include pc {
+            margin-bottom: 1.5rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     &__slide--1-title-2 {
         margin-top: -0.8rem;
@@ -177,7 +220,20 @@
     }
     &__slide--2-desc,
     &__slide--3-desc {
-        padding-right: 21rem;;
+        padding-right: 50%;
+        
+        @include pc {
+            padding-right: 40%;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     &__slide--2-pic,
     &__slide--3-pic {
@@ -210,7 +266,7 @@
     &__slide--2-price-new,
     &__slide--3-price-new {
         font-weight: 600;
-        font-size: 16px;
+        font-size: .8rem;
         color: #ff3737;
         display: block;
         padding-right: 0.25rem;
@@ -236,6 +292,19 @@
         border-radius: 20px;
         background: #3D3126;
         position: relative;
+        
+        @include pc {
+            padding: 0 5rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .hero__title
     &__title {
@@ -264,16 +333,44 @@
     }
 }
 .about {
-    margin-bottom: 9rem;
+    @include blockGap();
 
     &__img {
         grid-column: 1 / 8;
+        
+        @include pc {
+            grid-column: 2 / 7;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .about__info
     &__info {
         grid-column: 8 / -1;
         padding-left: 5rem;
         align-self: center;
+        
+        @include pc {
+            grid-column: 8 / 12;
+            padding-left: 0;
+
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .about__text
     &__text {
@@ -287,7 +384,7 @@
     }
 }
 .hits {
-    margin-bottom: 9rem;
+    @include blockGap();
 
     // .hits__title
     &__title {
@@ -323,7 +420,7 @@
         padding: 0.8rem;
         height: 100%;
     }
-    &__cards-block--2>&__card-holder {
+    &__cards-block--2 &__card-holder {
         padding: 1.4rem;
     }
     &__card--on-hover {
@@ -374,9 +471,35 @@
         max-height: 14rem;
         transform: scale(1);
         transition: transform .3s;
+        
+        @include pc {
+            max-height: 10rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     &__cards-block--2 &__pic {
         max-height: none;
+        
+        @include pc {
+            max-height: 20rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     &__pic img {
         width: auto;
@@ -386,6 +509,19 @@
     &__name {
         font-size: 1.2rem;
         line-height: 1.4;
+        
+        @include pc {
+            font-size: 1rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .hits__cards-block--2
     &__cards-block--2 {
@@ -394,7 +530,7 @@
     }
 }
 .service {
-    margin-bottom: 9rem;
+    @include blockGap();
     // .service__header
     &__header {
         grid-column: 1 / -1;
@@ -435,6 +571,19 @@
     // .service__name
     &__name {
         font-size: 1.6rem;
+        
+        @include pc {
+            font-size: 1.4rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .service__repair
     &__repair {
@@ -456,6 +605,19 @@
         font-size: 1.4rem;
         line-height: 1.2;
         letter-spacing: -0.02em;
+        
+        @include pc {
+            font-size: 1rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .service__repair-name
     &__repair-name {
@@ -477,6 +639,19 @@
         font-size: 1.6rem;
         letter-spacing: -0.02em;
         color: #24170a;
+        
+        @include pc {
+            font-size: 1.4rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .service__delivery-item
     &__delivery-item {
@@ -486,9 +661,10 @@
     }
     // .service__delivery-pic
     &__delivery-pic {
-        max-width: 8.5rem;
         border-radius: 10px;
         overflow: hidden;
+        height: 100%;
+        flex-basis: 40%;
     }
     &__delivery-pic img {
         width: 100%;
@@ -499,11 +675,25 @@
     &__delivery-info {
         display: flex;
         flex-direction: column;
+        flex-basis: 60%;
         gap: 0.4rem;
     }
     // .service__delivery-title
     &__delivery-title {
         font-weight: 400;
+
+        @include pc {
+            font-size: 1.2rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .service__delivery-desc
     &__delivery-desc {
@@ -512,12 +702,38 @@
     }
 }
 .form {
-    margin-bottom: 9rem;
+    @include blockGap();
     padding: 6rem 0;
     background: url('../images/bochka-dlya-formi.jpg') no-repeat center / cover;
+    
+    @include pc {
+        padding: 5.5rem 0;
+    }
+    @include laptop {
+
+    }
+    @include tablet {
+
+    }
+    @include mobile {
+        
+    }
     // .form__holder
     &__holder {
         row-gap: 1.5rem;
+        
+        @include pc {
+            row-gap: 3rem;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .form__title
     &__title {
@@ -525,6 +741,19 @@
         text-align: center;
         color: #fff;
         letter-spacing: 0.01em;
+        
+        @include pc {
+            text-align: left;
+        }
+        @include laptop {
+
+        }
+        @include tablet {
+
+        }
+        @include mobile {
+            
+        }
     }
     // .form__form
     &__form {
@@ -542,87 +771,3 @@
         width: 100%;
     }
 }
-.footer {
-    background: #3D3126;
-    padding: 3rem 0;
-
-    li, a, p {
-        font-weight: 400;
-        line-height: 140%;
-        color: #fff;
-    }
-    // .footer__top
-    &__top {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 2.5rem;
-    }
-    // .footer__address
-    &__address,
-    &__info,
-    &__lk,
-    &__about {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    &__address-link {
-        vertical-align: middle;
-    }
-    &__address-link span {
-        text-decoration: underline;
-        margin-left: 0.2rem;
-    }
-    &__address-link img {
-        width: 1.4rem;
-    }
-    // .footer__address-item
-    &__address-item {}
-    // .footer__info
-    &__info {}
-    // .footer__info-item
-    &__info-item {}
-    // .footer__lk
-    &__lk {}
-    // .footer__lk-item
-    &__lk-item {}
-    // .footer__about
-    &__about {}
-    // .footer__about-item
-    &__about-item {}
-    // .footer__bottom
-    &__bottom {
-        align-items: center;
-    }
-    // .footer__form-holder
-    &__form-holder {
-        grid-column: 1 / 6;
-    }
-    // .footer__form-title
-    &__form-title {
-        margin-bottom: 1.5rem;
-    }
-    // .footer__form
-    &__form {
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-    &__form input {
-        background: none;
-        border-radius: 10px;
-        border: 1px solid #fff;
-        padding: 0.75rem 1.5rem;
-        color: #fff;
-        width: 100%;
-    }
-    // .footer__form-name
-    &__form-name {}
-    // .footer__form-tel
-    &__form-tel {}
-    // .footer__text
-    &__text {
-        grid-column: 7 / 12;
-    }
-}
-

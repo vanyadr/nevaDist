@@ -51,7 +51,12 @@ h1,
   font-size: 2.7rem;
   letter-spacing: -0.02em;
 }
-
+@media (max-width: 1800px) {
+  h1,
+  .h1 {
+    font-size: 2.4rem;
+  }
+}
 h2,
 .h2 {
   font-family: AlumniSans, Serif;
@@ -59,7 +64,12 @@ h2,
   font-weight: 400;
   font-size: 2.7rem;
 }
-
+@media (max-width: 1800px) {
+  h2,
+  .h2 {
+    font-size: 2rem;
+  }
+}
 h3,
 .h3 {
   font-family: Inter, Serif;
@@ -68,7 +78,12 @@ h3,
   font-size: 1.6rem;
   letter-spacing: -0.02em;
 }
-
+@media (max-width: 1800px) {
+  h3,
+  .h3 {
+    font-size: 1.4rem;
+  }
+}
 h4,
 .h4 {
   font-family: Inter, Serif;
@@ -77,7 +92,12 @@ h4,
   font-size: 1.4rem;
   letter-spacing: -0.02em;
 }
-
+@media (max-width: 1800px) {
+  h4,
+  .h4 {
+    font-size: 20rem;
+  }
+}
 h5,
 .h5 {
   font-family: Inter, Serif;
@@ -87,7 +107,12 @@ h5,
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
-
+@media (max-width: 1800px) {
+  h5,
+  .h5 {
+    font-size: 1.4rem;
+  }
+}
 h6,
 .h6 {
   font-family: Inter, Serif;
@@ -95,17 +120,26 @@ h6,
   font-weight: 400;
   font-size: 0.8rem;
 }
-
+@media (max-width: 1800px) {
+  h6,
+  .h6 {
+    font-size: 0.6rem;
+  }
+}
 p, li, a, span {
   font-family: Inter, Serif;
   position: relative;
   font-weight: 400;
   font-size: 1rem;
 }
-
+@media (max-width: 1800px) {
+  p, li, a, span {
+    font-size: 0.8rem;
+  }
+}
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 6.3rem);
+  grid-template-columns: repeat(12, 1fr);
   column-gap: 0.4rem;
 }
 
@@ -117,7 +151,11 @@ div {
   max-width: 80rem;
   margin: 0 auto;
 }
-
+@media (max-width: 1800px) {
+  .container {
+    max-width: 64rem;
+  }
+}
 .wrapper {
   min-height: 100%;
   width: 100%;
@@ -154,10 +192,22 @@ img {
   display: flex;
   gap: 0.4rem;
 }
+@media (max-width: 1800px) {
+  .socials {
+    height: 1.2rem;
+  }
+}
 .socials-item {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.socials-item > a {
+  height: 100%;
+}
+.socials-item > a > img {
+  height: 100%;
+  object-fit: contain;
 }
 
 .header {
@@ -171,6 +221,11 @@ img {
 .header__holder {
   padding: 0.5rem 0;
   align-items: center;
+}
+@media (max-width: 1800px) {
+  .header__holder {
+    padding: 0.8rem 0;
+  }
 }
 .header__logo {
   grid-column: 1/3;
@@ -192,6 +247,11 @@ img {
   color: #776e65;
   background: #fffcf9;
   border-radius: 5px;
+}
+@media (max-width: 1800px) {
+  .header__search-inp {
+    width: 6.3rem;
+  }
 }
 .header__search-inp-holder {
   position: relative;
@@ -230,6 +290,93 @@ img {
 .header .menu__link {
   font-weight: 300;
   color: #fff;
+}
+
+.footer {
+  background: #3D3126;
+  padding: 3rem 0;
+}
+.footer li, .footer a, .footer p {
+  font-weight: 400;
+  line-height: 140%;
+  color: #fff;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.footer__address, .footer__info, .footer__lk, .footer__about {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 1800px) {
+  .footer__address, .footer__info, .footer__lk, .footer__about {
+    gap: 0.8rem;
+  }
+}
+.footer__address-link {
+  vertical-align: middle;
+}
+.footer__address-link span {
+  text-decoration: underline;
+  margin-left: 0.2rem;
+}
+.footer__address-link img {
+  width: 1.4rem;
+}
+.footer__bottom {
+  align-items: center;
+}
+.footer__form-holder {
+  grid-column: 1/6;
+}
+@media (max-width: 1800px) {
+  .footer__form-holder {
+    grid-column: 1/7;
+  }
+}
+.footer__form-title {
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 1800px) {
+  .footer__form-title {
+    font-size: 1rem;
+  }
+}
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.footer__form input {
+  background: none;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  width: 100%;
+}
+.footer__form-btn {
+  width: 10.5rem;
+  align-self: flex-end;
+  margin-top: 0.7rem;
+  background: #fff;
+  color: #3D3126;
+  transition: color 0.3s, background-color 0.3s;
+}
+.footer__form-btn:hover {
+  background: #3D3126;
+  color: #fff;
+}
+.footer__text {
+  grid-column: 7/12;
+}
+@media (max-width: 1800px) {
+  .footer__text {
+    grid-column: 8/12;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
