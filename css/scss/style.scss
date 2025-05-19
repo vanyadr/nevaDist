@@ -74,7 +74,7 @@ h1,
         font-size: 2.4rem;
     }
     @include laptop {
-
+        font-size: 1.6rem;
     }
     @include tablet {
 
@@ -94,7 +94,7 @@ h2,
         font-size: 2rem;
     }
     @include laptop {
-
+        font-size: 1.6rem;
     }
     @include tablet {
 
@@ -133,7 +133,7 @@ h4,
     letter-spacing: -0.02em;
     
     @include pc {
-        font-size: 20rem;
+        font-size: 2rem;
     }
     @include laptop {
 
@@ -158,7 +158,7 @@ h5,
         font-size: 1.4rem;
     }
     @include laptop {
-
+        font-size: 1rem;
     }
     @include tablet {
 
@@ -178,7 +178,7 @@ h6,
         font-size: .6rem;
     }
     @include laptop {
-
+        font-size: .6rem;
     }
     @include tablet {
 
@@ -197,7 +197,7 @@ p, li, a, span {
         font-size: .8rem;
     }
     @include laptop {
-
+        font-size: .7rem;
     }
     @include tablet {
 
@@ -222,6 +222,9 @@ div {
         max-width: 64rem;
     }
     @include laptop {
+        max-width: none;
+        margin: 0;
+        padding: 0 3rem;
     }
     @include tablet {
     }
@@ -249,6 +252,18 @@ img {
     border-radius: 10px;
     background: none;
     transition: background-color .3s;
+    
+    @include pc {
+    }
+    @include laptop {
+        font-size: .6rem;
+        min-width: 7rem;
+        padding: 0.5rem 1rem;
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
 }
 .border-btn:hover {
     background: rgba(#3D3126, .3);
@@ -293,14 +308,17 @@ img {
         rgba(61, 49, 38, .35) 100%);
     
     &__holder {
-        padding: 0.5rem 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         align-items: center;
         
         @include pc {
-            padding: 0.8rem 0;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
         }
         @include laptop {
-
+            padding-top: 0.6rem;
+            padding-bottom: 0.6rem;
         }
         @include tablet {
 
@@ -311,6 +329,17 @@ img {
     }
     &__logo {
         grid-column: 1 / 3;
+        
+        @include pc {
+        }
+        @include laptop {
+            grid-column: 1 / 4;
+            padding-right: 15%;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     &__menu {
         grid-column: 4 / 10;
@@ -320,6 +349,25 @@ img {
         display: flex;
         justify-content: flex-end;
         gap: 0.8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            gap: 0.6rem;
+            height: 1.2rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+
+    }
+    &__search>a {
+        height: 100%;
+    }
+    &__search>a>img {
+        height: 100%;
+        object-fit: contain;
     }
     &__search-inp {
         width: 8.6rem;
@@ -334,6 +382,7 @@ img {
             width: 6.3rem;
         }
         @include laptop {
+            display: none;
 
         }
         @include tablet {
@@ -355,6 +404,16 @@ img {
         right: .5rem;
         top: 50%;
         transform: translateY(-50%);
+
+        @include pc {
+        }
+        @include laptop {
+            display: none;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     .menu {
             &__list {
@@ -381,6 +440,16 @@ img {
             &__link {
                 font-weight: 300;
                 color: #fff;
+
+                @include pc {
+                }
+                @include laptop {
+                    font-size: .6rem;
+                }
+                @include tablet {
+                }
+                @include mobile {
+                }
             }
     }
 }
@@ -430,6 +499,16 @@ img {
     }
     &__address-link img {
         width: 1.4rem;
+        
+        @include pc {
+            width: 1.2rem;
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
 
     &__bottom {
@@ -443,7 +522,8 @@ img {
             grid-column: 1 / 7;
         }
         @include laptop {
-
+            grid-column: 1 / 9;
+            margin-bottom: 2.5rem;
         }
         @include tablet {
 
@@ -502,7 +582,7 @@ img {
             grid-column: 8 / 12;
         }
         @include laptop {
-
+            grid-column: 1 / 9;
         }
         @include tablet {
 
