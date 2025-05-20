@@ -184,7 +184,7 @@ h6,
         font-size: .5rem;
     }
     @include mobile {
-        
+        font-size: .3rem;
     }
 }
 p, li, a, span {
@@ -220,6 +220,7 @@ p, li, a, span {
         column-gap: 0.2rem;
     }
     @include mobile {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 div {
@@ -241,6 +242,7 @@ div {
         padding: 0 2rem;
     }
     @include mobile {
+        padding: 0 .5rem;
     }
 }
 .wrapper {
@@ -338,7 +340,8 @@ img {
             padding-bottom: 0.5rem;
         }
         @include mobile {
-            
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
         }
     }
     &__holder {
@@ -372,6 +375,7 @@ img {
             grid-column: 4 / 6;
         }
         @include mobile {
+            grid-column: 2 / 4;
         }
     }
     &__menu {
@@ -394,6 +398,8 @@ img {
             grid-column: 6 / -1;
         }
         @include mobile {
+            grid-column: 4 / -1;
+            gap: 0.2rem;
         }
 
     }
@@ -424,7 +430,7 @@ img {
             display: block;
         }
         @include mobile {
-            
+            display: none;
         }
     }
     &__search-inp-holder {
@@ -451,6 +457,7 @@ img {
             height: 1rem;
         }
         @include mobile {
+            display: none;
         }
     }
     .menu {
@@ -565,9 +572,29 @@ img {
     }
     &__top--mobile .footer__address-item:nth-child(2n) {
         grid-column: 6 / -1;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+        }
     }
     &__top--mobile .footer__address-item:nth-child(2n-1) {
         grid-column: 1 / 6;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+        }
     }
     // .footer__address
     &__address,
@@ -600,11 +627,31 @@ img {
     &__lk {
         grid-column: 3 / 5;
         padding-left: 2rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            grid-column: 3 / -1;
+        }
     }
     // .footer__lk-item
     // .footer__about
     &__about {
         grid-column: 6 / -1;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+        }
     }
 
     &__address-link {
@@ -647,7 +694,8 @@ img {
             margin-bottom: 0;
         }
         @include mobile {
-            
+            grid-column: 1 / -1;
+            margin-bottom: 2.5rem;
         }
     }
     // .footer__form-title
@@ -688,6 +736,16 @@ img {
         background: #fff;
         color: #3D3126;
         transition: color .3s, background-color .3s;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            margin-top: 0;
+        }
     }
     &__form-btn:hover {
         background: #3D3126;
@@ -706,7 +764,9 @@ img {
             grid-column: 6 / -1;
         }
         @include mobile {
-            
+            grid-column: 1 / -1;
+
+            font-size: .6rem;
         }
     }
 }
