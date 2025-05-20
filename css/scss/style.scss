@@ -77,7 +77,7 @@ h1,
         font-size: 1.6rem;
     }
     @include tablet {
-
+        font-size: 1.4rem;
     }
     @include mobile {
 
@@ -97,7 +97,7 @@ h2,
         font-size: 1.6rem;
     }
     @include tablet {
-
+        font-size: 1.4rem; 
     }
     @include mobile {
         
@@ -181,7 +181,7 @@ h6,
         font-size: .6rem;
     }
     @include tablet {
-
+        font-size: .5rem;
     }
     @include mobile {
         
@@ -210,6 +210,17 @@ p, li, a, span {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 0.4rem;
+    
+    @include pc {
+    }
+    @include laptop {
+    }
+    @include tablet {
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 0.2rem;
+    }
+    @include mobile {
+    }
 }
 div {
     height: fit-content;
@@ -227,6 +238,7 @@ div {
         padding: 0 3rem;
     }
     @include tablet {
+        padding: 0 2rem;
     }
     @include mobile {
     }
@@ -307,7 +319,8 @@ img {
         rgba(61, 49, 38, .63) 64.42%, 
         rgba(61, 49, 38, .35) 100%);
     
-    &__holder {
+    &__holder,
+    &__holder--mobile {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         align-items: center;
@@ -321,10 +334,28 @@ img {
             padding-bottom: 0.6rem;
         }
         @include tablet {
-
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
         }
         @include mobile {
             
+        }
+    }
+    &__holder {
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+    &__holder--mobile {
+        display: none;
+        @include tablet {
+            display: grid;
+        }
+        @include mobile {
+            display: grid;
         }
     }
     &__logo {
@@ -337,6 +368,8 @@ img {
             padding-right: 15%;
         }
         @include tablet {
+            padding-right: 0;
+            grid-column: 4 / 6;
         }
         @include mobile {
         }
@@ -348,6 +381,7 @@ img {
         grid-column: 10 / -1;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         gap: 0.8rem;
         
         @include pc {
@@ -357,6 +391,7 @@ img {
             height: 1.2rem;
         }
         @include tablet {
+            grid-column: 6 / -1;
         }
         @include mobile {
         }
@@ -377,16 +412,16 @@ img {
         color: #776e65;
         background: #fffcf9;
         border-radius: 5px;
-        
+
         @include pc {
             width: 6.3rem;
         }
         @include laptop {
             display: none;
-
         }
         @include tablet {
-
+            padding: .4rem;
+            display: block;
         }
         @include mobile {
             
@@ -404,58 +439,88 @@ img {
         right: .5rem;
         top: 50%;
         transform: translateY(-50%);
-
+        
         @include pc {
         }
         @include laptop {
             display: none;
         }
         @include tablet {
+            display: block;
+            width: 1rem;
+            height: 1rem;
         }
         @include mobile {
         }
     }
     .menu {
-            &__list {
-                display: flex;
-                gap: 0.5rem;
-                justify-content: space-evenly;
-            }
-            &__item {
-                position: relative;
-            }
-            &__item::after {
-                content: '';
-                background: url(../images/openDropDown-arrow.svg) no-repeat center / contain;
-                width: 1.2rem;
-                height: 1.2rem;
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translate(100%, -50%);
-            }
-            &__item--no-arrow::after {
-                display: none;
-            }
-            &__link {
-                font-weight: 300;
-                color: #fff;
+        &__list {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: space-evenly;
+        }
+        &__item {
+            position: relative;
+        }
+        &__item::after {
+            content: '';
+            background: url(../images/openDropDown-arrow.svg) no-repeat center / contain;
+            width: 1.2rem;
+            height: 1.2rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(100%, -50%);
+        }
+        &__item--no-arrow::after {
+            display: none;
+        }
+        &__link {
+            font-weight: 300;
+            color: #fff;
 
-                @include pc {
-                }
-                @include laptop {
-                    font-size: .6rem;
-                }
-                @include tablet {
-                }
-                @include mobile {
-                }
+            @include pc {
             }
+            @include laptop {
+                font-size: .6rem;
+            }
+            @include tablet {
+            }
+            @include mobile {
+            }
+        }
     }
+    // .header__burder--mobile
+    &__burder--mobile {
+        grid-column: 1 / 2;
+        display: flex;
+        justify-content: flex-start;
+    }
+    // .header__burger-holder--mobile
+    &__burger-btn--mobile {
+        width: 1.2rem;
+        border: none;
+        background: none;
+    }
+    &__burger-btn--mobile img {
+        width: 100%;
+    }
+    // .header__logo
 }
 .footer {
     background: #3D3126;
     padding: 3rem 0;
+    width: 100%;
+    
+    @include pc {
+    }
+    @include laptop {
+    }
+    @include tablet {
+        padding: 2rem 0;
+    }
+    @include mobile {
+    }
 
     li, a, p {
         font-weight: 400;
@@ -467,6 +532,42 @@ img {
         display: flex;
         justify-content: space-between;
         margin-bottom: 2.5rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+        }
+    }
+    &__top--mobile {
+        display: none;
+        row-gap: 3rem;
+        margin-bottom: 3rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            display: grid;
+        }
+        @include mobile {
+        }
+    }
+    &__top--mobile .footer__address{
+        display: grid;
+        gap: 0.2rem;
+        grid-column: 1 / -1;
+    }
+    &__top--mobile .footer__address-item:nth-child(2n) {
+        grid-column: 6 / -1;
+    }
+    &__top--mobile .footer__address-item:nth-child(2n-1) {
+        grid-column: 1 / 6;
     }
     // .footer__address
     &__address,
@@ -490,6 +591,22 @@ img {
             
         }
     }
+    // .footer__info
+    &__info {
+        grid-column: 1 / 3;
+    }
+    // .footer__info-item
+    // .footer__lk
+    &__lk {
+        grid-column: 3 / 5;
+        padding-left: 2rem;
+    }
+    // .footer__lk-item
+    // .footer__about
+    &__about {
+        grid-column: 6 / -1;
+    }
+
     &__address-link {
         vertical-align: middle;
     }
@@ -526,7 +643,8 @@ img {
             margin-bottom: 2.5rem;
         }
         @include tablet {
-
+            grid-column: 1 / 5;
+            margin-bottom: 0;
         }
         @include mobile {
             
@@ -585,7 +703,7 @@ img {
             grid-column: 1 / 9;
         }
         @include tablet {
-
+            grid-column: 6 / -1;
         }
         @include mobile {
             

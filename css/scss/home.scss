@@ -38,7 +38,7 @@
         margin-bottom: 6.5rem;
     }
     @include tablet {
-    
+        margin-bottom: 5rem;
     }
     @include mobile {
         
@@ -49,10 +49,20 @@
     padding-top: 5rem;
     @include blockGap();
     row-gap: 0.4rem;
+    
+    @include pc {
+    }
+    @include laptop {
+    }
+    @include tablet {
+        padding-top: 3rem;
+    }
+    @include mobile {
+    }
     // .hero__slider
     &__slider {
         height: 35rem;
-        grid-column: 1 / 7;
+        grid-column: 1 / 5;
         
         @include pc {
             height: 34rem;
@@ -61,7 +71,7 @@
             height: 23rem;
         }
         @include tablet {
-
+            height: 17.5rem;
         }
         @include mobile {
             
@@ -111,6 +121,7 @@
             width: 11.5rem;
         }
         @include tablet {
+            width: 10rem;
         }
         @include mobile {
         }
@@ -132,6 +143,7 @@
             padding: .8rem .8rem;
         }
         @include tablet {
+            padding: .6rem .6rem;
         }
         @include mobile {
         }
@@ -169,7 +181,7 @@
             margin-bottom: 1.3rem;
         }
         @include tablet {
-
+            margin-top: -0.8rem;
         }
         @include mobile {
             
@@ -209,6 +221,16 @@
         width: 100%;
         height: 100%;
         padding: 1rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            padding: .6rem;
+        }
+        @include mobile {
+        }
     }
     &__slide--2-sale{
         height: 100%;
@@ -217,6 +239,16 @@
     &__slide--2-sale-1 {
         grid-area: A;
         padding: .8rem .8rem 1.2rem 1.4rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            padding: 0.6rem;
+        }
+        @include mobile {
+        }
     }
     &__slide--2-sale-2 {
         grid-area: B;
@@ -224,6 +256,16 @@
         backdrop-filter: none;
         background: #3D3126;
         padding: .8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            padding: .6rem;
+        }
+        @include mobile {
+        }
     }
     &__slide--2-sale-3 {
         grid-area: C;
@@ -231,6 +273,16 @@
         backdrop-filter: none;
         background: #f6e9d8;
         padding: .8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            padding: .6rem;
+        }
+        @include mobile {
+        }
     }
     &__slide--2-sale-1 &__slide--2-icon {
         width: 2.2rem;
@@ -241,6 +293,7 @@
             width: 1.6rem;
         }
         @include tablet {
+            width: 1.3rem;
         }
         @include mobile {
         }
@@ -255,6 +308,16 @@
     &__slide--2-sale-2 &__slide--2-icon img,
     &__slide--2-sale-3 &__slide--3-icon img {
         width: 1.6rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            width: 1.3rem;
+        }
+        @include mobile {
+        }
     }
     &__slide--2-title-1 {
         margin-bottom: 1.6rem;
@@ -290,7 +353,7 @@
             padding-right: 10%;
         }
         @include tablet {
-
+            padding-right: 0;
         }
         @include mobile {
             
@@ -349,6 +412,16 @@
     }
     &__bullets {
         grid-column: 1 / 7;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            grid-column: 1 / 5;
+        }
+        @include mobile {
+        }
     }
     &__bullet {
         width: 0.4rem;
@@ -359,7 +432,7 @@
     }
     // .hero__info
     &__info {
-        grid-column: 7 / -1;
+        grid-column: 5 / -1;
         @include centerItem();
         flex-direction: column;
         gap: 1.5rem;
@@ -376,6 +449,7 @@
             padding: 0 3rem;
         }
         @include tablet {
+            padding: 0 2rem;
 
         }
         @include mobile {
@@ -393,6 +467,16 @@
         text-align: center;
         line-height: 1.2;
         letter-spacing: 0.02em;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            font-size: .6rem;
+        }
+        @include mobile {
+        }
     }
     &__btn {
         transition: color .3s, background-color .3s, border-color .3s;
@@ -406,6 +490,16 @@
         position: absolute;
         right: 1.2rem;
         bottom: 1.2rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+        }
     }
 }
 .about {
@@ -421,7 +515,7 @@
             grid-column: 2 / 7;
         }
         @include tablet {
-
+            grid-column: 1 / 5;
         }
         @include mobile {
             
@@ -442,7 +536,8 @@
             padding-left: 1rem;
         }
         @include tablet {
-
+            grid-column: 5 / -1;
+            padding-left: 1rem;
         }
         @include mobile {
             
@@ -452,6 +547,16 @@
     &__text {
         line-height: 1.2;
         margin-bottom: 1.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            margin-bottom: 1.2rem;
+        }
+        @include mobile {
+        }
     }
     // .about__btn
     &__btn {
@@ -465,12 +570,32 @@
     // .hits__title
     &__title {
         margin-bottom: 1.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            margin-bottom: 1.2rem;
+        }
+        @include mobile {
+        }
     }
     &__cards-block--1 {
-        grid-column: 1 / 7;
+        grid-column: 1 / 5;
         display: grid;
         grid: 1fr 1fr / 1fr 1fr;
         gap: 0.4rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            gap: 0.2rem;
+        }
+        @include mobile {
+        }
     }
     // .hits__card
     &__card {
@@ -495,9 +620,29 @@
         border-radius: 10px;
         padding: 0.8rem;
         height: 100%;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            padding: 0.4rem;
+        }
+        @include mobile {
+        }
     }
     &__cards-block--2 &__card-holder {
         padding: 1.4rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            padding: 0.8rem;
+        }
+        @include mobile {
+        }
     }
     &__card--on-hover {
         pointer-events: none;
@@ -551,6 +696,16 @@
     }
     &__icon img {
         width: 1.6rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            width: 1.2rem;
+        }
+        @include mobile {
+        }
     }
     // .hits__pic
     &__pic {
@@ -565,7 +720,7 @@
             max-height: 6rem;
         }
         @include tablet {
-
+            max-height: 4rem;
         }
         @include mobile {
             
@@ -581,7 +736,7 @@
             max-height: 15rem;
         }
         @include tablet {
-
+            max-height: 10rem;
         }
         @include mobile {
             
@@ -590,6 +745,17 @@
     &__pic img {
         width: auto;
         height: 100%;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            width: 100%;
+            object-fit: contain;
+        }
+        @include mobile {
+        }
     }
     // .hits__name
     &__name {
@@ -601,10 +767,9 @@
         }
         @include laptop {
             font-size: .8rem;
-
         }
         @include tablet {
-
+            font-size: .7rem;
         }
         @include mobile {
             
@@ -612,7 +777,7 @@
     }
     // .hits__cards-block--2
     &__cards-block--2 {
-        grid-column: 7 / -1;
+        grid-column: 5 / -1;
         aspect-ratio: 1 / 1;
     }
 }
@@ -624,6 +789,16 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 1.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            margin-bottom: 1.2rem;
+        }
+        @include mobile {
+        }
     }
     // .service__btn
     &__btn {
@@ -631,6 +806,17 @@
         color: #3D3126;
     }
     // .service__block
+    &__blocks {
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            display: flex;
+        }
+        @include mobile {
+        }
+    }
     &__block {
         border-radius: 20px;
         padding: 1.2rem;
@@ -638,7 +824,21 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: stretch;
         gap: 0.8rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            flex-grow: 1;
+            flex-basis: 0;
+            height: auto;
+            padding: 1rem .6rem;
+        }
+        @include mobile {
+        }
     }
     // .service__block--1
     &__block--1 {
@@ -649,6 +849,16 @@
     &__block--2 {
         grid-column: 5 / 9;
         background: rgba(227, 210, 195, 0.84);
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            justify-content: flex-end;
+        }
+        @include mobile {
+        }
     }
     // .service__block--3
     &__block--3 {
@@ -686,6 +896,16 @@
         align-items: center;
         padding: 0.4rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            padding: 0.2rem 0;
+        }
+        @include mobile {
+        }
     }
     // .service__repair-num
     &__repair-num {
@@ -726,6 +946,16 @@
     &__catalog-header {
         line-height: 1.2;
         text-align: right;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+        }
     }
     &__catalog-header img {
         width: 1.6rem;
@@ -757,6 +987,18 @@
         display: flex;
         justify-content: space-between;
         gap: 0.6rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            gap: 0.4rem;
+            flex-basis: 0;
+            flex-grow: 1;
+        }
+        @include mobile {
+        }
     }
     // .service__delivery-pic
     &__delivery-pic {
@@ -764,6 +1006,16 @@
         overflow: hidden;
         height: 100%;
         flex-basis: 40%;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            flex-basis: 30%;
+        }
+        @include mobile {
+        }
     }
     &__delivery-pic img {
         width: 100%;
@@ -776,6 +1028,16 @@
         flex-direction: column;
         flex-basis: 60%;
         gap: 0.4rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            flex-basis: 70%;
+        }
+        @include mobile {
+        }
     }
     // .service__delivery-title
     &__delivery-title {
@@ -861,7 +1123,9 @@
             font-size: 1.8rem;
         }
         @include tablet {
-
+            font-size: 1.4rem;
+            text-align: left;
+            grid-column: 1 / 7;
         }
         @include mobile {
             
@@ -891,5 +1155,9 @@
         padding: 0.75rem 1.5rem;
         color: rgba(0, 0, 0, 0.8);
         width: 100%;
+    }
+    &__submit {
+        backdrop-filter: blur(6px);
+        background: rgba(255, 255, 255, 0.01);
     }
 }
