@@ -1,3 +1,5 @@
+import {openDropDown} from './modules/openDropDown.js'
+
 document.addEventListener('DOMContentLoaded', () => {
     $('.hero__slider').slick({
         dots: true,
@@ -12,4 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         appendDots: $('.hero__bullets')
     });
+    openDropDown();
 });

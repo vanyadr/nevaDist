@@ -16,6 +16,7 @@
 </head>
 <body>
     <div class="wrapper">
+        <div class="overlay"></div>
         <header class="header">
             <section class="header__holder container grid">
                 <div class="header__logo">
@@ -28,19 +29,19 @@
                 <nav class="header__menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Пивоварение</a>
+                            Пивоварение
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Самогоноварение</a>
+                            Самогоноварение
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Другое</a>
+                            Другое
                         </li>
                         <li class="menu__item menu__item--no-arrow">
-                            <a href="#" class="menu__link">О нас</a>
+                            О нас
                         </li>
                         <li class="menu__item menu__item--no-arrow">
-                            <a href="#" class="menu__link">Поддержка</a>
+                            Поддержка
                         </li>
                     </ul>
                 </nav>
@@ -57,6 +58,108 @@
                     <a href="#">
                         <img src="images/cart-icon.svg" alt="Корзина">
                     </a>
+                </div>
+            </section>
+            <section class="header__drop-down-menu">
+                <div class="header__ddm-item container">
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Пивоварни</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Невская Винокурня</a></li>
+                            <li class="header__category-item"><a href="#">Speidel</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Аксессуары</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Насосы</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Сырье</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Солод</a></li>
+                            <li class="header__category-item"><a href="#">Хмель</a></li>
+                            <li class="header__category-item"><a href="#">Дрожжи</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Системы охлаждения</a></h5>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">ЦКТ</a></h5>
+                    </div>
+                </div>
+                <div class="header__ddm-item container">
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Конструктор</a></h5>
+                        <ul class="header__category-list header__category-list--2-cols">
+                            <li class="header__category-item"><a href="#">Дефлегматоры, холодильники</a></li>
+                            <li class="header__category-item"><a href="#">Трубы, патрубки и крепления</a></li>
+                            <li class="header__category-item"><a href="#">Диоптры и смотровые стекла</a></li>
+                            <li class="header__category-item"><a href="#">ТЭНы и элементы управления</a></li>
+                            <li class="header__category-item"><a href="#">Краны, заглушки</a></li>
+                            <li class="header__category-item"><a href="#">Узлы отбора</a></li>
+                            <li class="header__category-item"><a href="#">Переходники</a></li>
+                            <li class="header__category-item"><a href="#">Переходники</a></li>
+                            <li class="header__category-item"><a href="#">Сантехкомплект</a></li>
+                            <li class="header__category-item"><a href="#">Этажи флейт</a></li>
+                            <li class="header__category-item"><a href="#">Тарелочки, пыжи, СПН, РПН</a></li>
+                            <li class="header__category-item"><a href="#">Тройники</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Самогонные аппараты</a></h5>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Самогонные аппараты</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Пароводяные котлы</a></li>
+                            <li class="header__category-item"><a href="#">Флейты, колонны, аламбики</a></li>
+                            <li class="header__category-item"><a href="#">Баки</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__ddm-item container">
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Виноделие</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Гидропрессы</a></li>
+                            <li class="header__category-item"><a href="#">Измельчители</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Ингредиенты</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Декстроза</a></li>
+                            <li class="header__category-item"><a href="#">Дрожжи</a></li>
+                            <li class="header__category-item"><a href="#">Хмель</a></li>
+                            <li class="header__category-item"><a href="#">Солод</a></li>
+                            <li class="header__category-item"><a href="#">Уголь активированный</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Тара, бочки</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Дубовые бочки</a></li>
+                            <li class="header__category-item"><a href="#">Нержавеющие емкости</a></li>
+                            <li class="header__category-item"><a href="#">Пластиковые емкости</a></li>
+                            <li class="header__category-item"><a href="#">ПЭТ тара</a></li>
+                            <li class="header__category-item"><a href="#">Стеклянная тара</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Доп. оборудование</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Моющие средства</a></li>
+                            <li class="header__category-item"><a href="#">Для самогоноварения</a></li>
+                            <li class="header__category-item"><a href="#">Силиконовые трубки</a></li>
+                            <li class="header__category-item"><a href="#">Термометры, монометры</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Экскурсии</a></h5>
+                    </div>
                 </div>
             </section>
             <section class="header__holder--mobile container grid">
