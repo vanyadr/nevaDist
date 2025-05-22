@@ -51,7 +51,7 @@
     grid-column: 1 / -1;
     padding-top: 5rem;
     @include blockGap();
-
+    
     &__search-inp {
         width: 100%;
         padding: .7rem;
@@ -78,7 +78,6 @@
         @include pc {
         }
         @include laptop {
-            display: none;
         }
         @include tablet {
             display: block;
@@ -86,7 +85,6 @@
             height: 1rem;
         }
         @include mobile {
-            display: none;
         }
     }
 }
@@ -99,12 +97,22 @@
     margin-right: 1.3rem;
     position: sticky;
     top: 5rem;
-		// .filters__header
+    // .filters__header
+    @include pc {
+        grid-column: 1 / 5;
+    }
+    @include laptop {
+    }
+    @include tablet {
+        display: none;
+    }
+    @include mobile {
+    }
     &__header {
         margin-bottom: 1.5rem;
     }
     .accordion {
-            // .accordion__holder
+        // .accordion__holder
             &__holder {
                 gap: 1.5rem;
             }
@@ -112,6 +120,18 @@
     .accordion-title {
         color: #000;
         flex-basis: 93%;
+        font-size: 1rem;
+        
+        @include pc {
+            font-size: .9rem;
+        }
+        @include laptop {
+            font-size: .8rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     .accordion-bullet {
         flex-basis: 7%;
@@ -188,6 +208,16 @@
         gap: 0.8rem;
         flex-wrap: nowrap;
         margin-bottom: 0;
+        
+        @include pc {
+        }
+        @include laptop {
+            gap: 0.4rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     &__btn {
         flex: 1;
@@ -211,19 +241,55 @@
 .catalog {
     grid-column: 4 / -1;
     @include blockGap();
-    margin-left: 1.3rem;
+    
+    @include pc {
+        grid-column: 5 / -1;
+        margin-left: 0;
+    }
+    @include laptop {
+    }
+    @include tablet {
+        grid-column: 1 / -1;
+    }
+    @include mobile {
+    }
 	// .catalog__sort-by
     &__list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         column-gap: 0.8rem;
         row-gap: 1.5rem;
+        
+        @include pc {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include laptop {
+            column-gap: 0.6rem;
+            row-gap: 1.2rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 0.4rem;
+            row-gap: 0.8rem;
+        }
     }
     // .catalog__item
     &__item {
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            gap: 0.6rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .catalog__item-img
     &__item-img {
@@ -249,11 +315,33 @@
         right: .5rem;
         width: 1.6rem;
         height: 1.6rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
     }
     // .catalog__item-name
     &__item-name {
         line-height: 1.2;
-        padding-right: 1rem;
+        font-size: .8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: .7rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .6rem;
+        }
     }
     // .catalog__item-price
     &__item-price {
@@ -265,6 +353,7 @@
     // .catalog__item-btn
     &__item-btn {
         width: 100%;
+        min-width: 0;
         border: 1px solid #3D3126;
         color: #3D3126;
     }
