@@ -54,7 +54,7 @@ body {
     font-family: Inter, Serif;
     scrollbar-gutter: stable;
 }
-body.popup-open {
+body.menu-opened {
     position: fixed;
 }
 body.popup-open header {
@@ -604,6 +604,7 @@ img {
         color: #fff;
         font-weight: 300;
         font-size: .8rem;
+        line-height: 1.2;
         
         @include pc {
         }
@@ -622,6 +623,98 @@ img {
     &__category-item:hover {
         transform: translateX(5px);
         transition: transform .3s;
+    }
+	&__mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #3D3126;
+        z-index: 3;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display: none;
+        overflow-y: auto;
+    }
+    &__mobile-menu.active {
+        display: block;
+    }
+    .mobile-menu__closer-holder {
+        display: flex;
+        height: 1.2rem;
+        margin-bottom: 1rem;
+
+        .mobile-menu__closer {
+            background: none;
+            border: none;
+        }
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    .accrodion-holder {
+        display: flex;
+        flex-direction: column;
+    }
+    .accordion-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        text-align: left;
+        color: #fff;
+        background: none;
+        border: none;
+    }
+    .accordion-title {
+        flex-basis: 95%;
+
+        @include mobile {
+            flex-basis: 88%;
+        }
+    }
+    .accordion-bullet {
+        flex-basis: 5%;
+
+        @include mobile {
+            flex-basis: 12%;
+        }
+    }
+    .accordion-bullet>img {
+        transform: rotate(0deg);
+        transition: transform .3s;
+    }
+    .accordion-bullet.opened>img {
+        transform: rotate(180deg);
+    }
+    .accordion-content {
+        overflow: hidden;
+        margin-bottom: 0.8rem;
+        padding: 0 1rem 0 0;
+        max-height: 0;
+        transition: padding .5s ease;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+        column-gap: 0.5rem;
+
+        @include mobile {
+            row-gap: 1rem;
+        }
+    }
+    .accordion-content.opened {
+        padding: 1rem 1rem 2rem 0;
+        max-height: fit-content;
+    }
+    .accordion-item--no-open {
+        color: #fff;
+        margin-bottom: .8rem;
+        line-height: 2;
     }
 }
 .footer {
