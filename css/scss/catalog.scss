@@ -52,6 +52,10 @@
     padding-top: 5rem;
     @include blockGap();
     
+    @include tablet {
+        padding-top: 3.5rem;
+    }
+    
     &__search-inp {
         width: 100%;
         padding: .7rem;
@@ -253,7 +257,110 @@
     }
     @include mobile {
     }
-	// .catalog__sort-by
+    &__sort-by {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        align-items: center;
+        
+        @include laptop {
+            margin-bottom: 1.5rem;
+        }
+        @include tablet {
+            padding: 0.8rem 0;
+            margin-bottom: 0;
+        }
+        @include mobile {
+        }
+    }
+    &__sort-by-sorts {
+        display: flex;
+        gap: 1.7rem;
+        align-items: center;
+        
+        @include laptop {
+            gap: 1.4rem;
+        }
+        @include tablet {
+            gap: 1rem;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+    &__sort-btn {
+        border: 0;
+        background: none;
+        font-size: .9rem;
+        font-weight: 400;
+        color: #000;
+        
+        @include laptop {
+            font-size: .8rem;
+        }
+    }
+    &__sort-btn--active {
+        color: #a98568;
+    }
+    &__filters-btn {
+        border: 0;
+        background: none;
+        font-size: .8rem;
+        font-weight: 400;
+        color: #000;
+        display: none;
+        gap: 0.3rem;
+        align-items: center;
+        
+        @include tablet {
+            display: flex;
+        }
+        @include mobile {
+            display: flex;
+        }
+    }
+    .filters-btn__bullet {
+        width: 1.2rem;
+        height: 1.2rem;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .filters-btn__name {
+        @include mobile {
+            display: none;
+        }
+    }
+    &__sort-by-sorts--mobile {
+        display: none;
+        
+        @include mobile {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+    }
+    &__sort-by-select {
+        font-size: .7rem;
+        font-weight: 400;
+    }
+    &__sort-by-select option {
+        font-size: .7rem;
+        font-weight: 400;
+    }
+    &__sort-by-select-label {
+        width: 1.2rem;
+        height: 1.2rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
     &__list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);

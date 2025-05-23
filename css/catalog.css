@@ -27,6 +27,11 @@
     margin-bottom: 1.5rem;
   }
 }
+@media (max-width: 1024px) {
+  .search {
+    padding-top: 3.5rem;
+  }
+}
 .search__search-inp {
   width: 100%;
   padding: 0.7rem;
@@ -232,6 +237,119 @@
   .catalog {
     grid-column: 1/-1;
   }
+}
+.catalog__sort-by {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+@media (max-width: 1400px) {
+  .catalog__sort-by {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .catalog__sort-by {
+    padding: 0.8rem 0;
+    margin-bottom: 0;
+  }
+}
+.catalog__sort-by-sorts {
+  display: flex;
+  gap: 1.7rem;
+  align-items: center;
+}
+@media (max-width: 1400px) {
+  .catalog__sort-by-sorts {
+    gap: 1.4rem;
+  }
+}
+@media (max-width: 1024px) {
+  .catalog__sort-by-sorts {
+    gap: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .catalog__sort-by-sorts {
+    display: none;
+  }
+}
+.catalog__sort-btn {
+  border: 0;
+  background: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #000;
+}
+@media (max-width: 1400px) {
+  .catalog__sort-btn {
+    font-size: 0.8rem;
+  }
+}
+.catalog__sort-btn--active {
+  color: #a98568;
+}
+.catalog__filters-btn {
+  border: 0;
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000;
+  display: none;
+  gap: 0.3rem;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .catalog__filters-btn {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .catalog__filters-btn {
+    display: flex;
+  }
+}
+.catalog .filters-btn__bullet {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.catalog .filters-btn__bullet img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .catalog .filters-btn__name {
+    display: none;
+  }
+}
+.catalog__sort-by-sorts--mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .catalog__sort-by-sorts--mobile {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+}
+.catalog__sort-by-select {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.catalog__sort-by-select option {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.catalog__sort-by-select-label {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.catalog__sort-by-select-label img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .catalog__list {
   display: grid;

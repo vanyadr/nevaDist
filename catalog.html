@@ -425,7 +425,29 @@
                 </ul>
             </aside>
             <section class="catalog">
-                <div class="catalog__sort-by"></div>
+                <div class="catalog__sort-by">
+                    <div class="catalog__sort-by-sorts">
+                        <button class="catalog__sort-btn">Новинки</button>
+                        <button class="catalog__sort-btn">Сначала дешевле</button>
+                        <button class="catalog__sort-btn catalog__sort-btn--active">Сначала дороже</button>
+                    </div>
+                    <div class="catalog__sort-by-sorts--mobile">
+                        <label for="sort-select" class="catalog__sort-by-select-label">
+                            <img src="images/sort-icon.svg" alt="Сортировка">
+                        </label>
+                        <select name="sort-select" id="sort-select" class="catalog__sort-by-select">
+                            <option value="newer">Новинки</option>
+                            <option value="cheaper" selected>Сначала дешевле</option>
+                            <option value="expensive">Сначала дороже</option>
+                        </select>
+                    </div>
+                    <button class="catalog__filters-btn">
+                        <div class="filters-btn__bullet">
+                            <img src="images/filters-icon.svg" alt="Фильтры">
+                        </div>
+                        <p class="filters-btn__name">Фильтры</p>
+                    </button>
+                </div>
                 <ul class="catalog__list">
                     <li class="catalog__item">
                         <div class="catalog__item-img">
