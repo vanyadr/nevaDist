@@ -448,6 +448,99 @@
                         <p class="filters-btn__name">Фильтры</p>
                     </button>
                 </div>
+                <section class="catalog__filters-block">
+                    <h2 class="filters__header">Фильтр товаров</h2>
+                    <ul class="accordion__holder accrodion-holder">
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">Цена</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow-black.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content filters__price-inps">
+                                <input class="filters__price-inp" type="number" name="" id="" placeholder="От">
+                                <input class="filters__price-inp" type="number" name="" id="" placeholder="До">
+                            </div>
+                        </li>
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">Производитель</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow-black.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="filters__makers-list filters__check-list">
+                                    <li class="filters__makers-item filters__check-item">
+                                        <input type="checkbox" name="filter__maker1" id="filter__maker1" class="filters__check">
+                                        <label class="filters__check-label" for="filter__maker1">Россия</label>
+                                    </li>
+                                    <li class="filters__makers-item filters__check-item">
+                                        <input type="checkbox" name="filter__maker2" id="filter__maker2" class="filters__check">
+                                        <label class="filters__check-label" for="filter__maker2">Китай</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">Тип</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow-black.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="filters__type-list filters__check-list">
+                                    <li class="filters__type-item filters__check-item">
+                                        <input type="checkbox" name="filter__type1" id="filter__type1" class="filters__check">
+                                        <label class="filters__check-label" for="filter__type1">Арматура</label>
+                                    </li>
+                                    <li class="filters__type-item filters__check-item">
+                                        <input type="checkbox" name="filter__type2" id="filter__type2" class="filters__check">
+                                        <label class="filters__check-label" for="filter__type2">Дефлегматоры/холодильники</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">Материал</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow-black.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="filters__material-list filters__check-list">
+                                    <li class="filters__material-item filters__check-item">
+                                        <input type="checkbox" name="filter__material1" id="filter__material1" class="filters__check">
+                                        <label class="filters__check-label" for="filter__material1">Боросиликатное стекло</label>
+                                    </li>
+                                    <li class="filters__material-item filters__check-item">
+                                        <input type="checkbox" name="filter__material2" id="filter__material2" class="filters__check">
+                                        <label class="filters__check-label" for="filter__material2">Керамика</label>
+                                    </li>
+                                    <li class="filters__material-item filters__check-item">
+                                        <input type="checkbox" name="filter__material3" id="filter__material3" class="filters__check">
+                                        <label class="filters__check-label" for="filter__material3">Латунь/пластик</label>
+                                    </li>
+                                    <li class="filters__material-item filters__check-item">
+                                        <input type="checkbox" name="filter__material4" id="filter__material4" class="filters__check">
+                                        <label class="filters__check-label" for="filter__material4">Медь М1</label>
+                                    </li>
+                                    <li class="filters__material-item filters__check-item">
+                                        <input type="checkbox" name="filter__material5" id="filter__material5" class="filters__check">
+                                        <label class="filters__check-label" for="filter__material5">Нержавеющая сталь</label>
+                                    </li>
+                                    <li class="filters__material-item filters__check-item">
+                                        <input type="checkbox" name="filter__material6" id="filter__material6" class="filters__check">
+                                        <label class="filters__check-label" for="filter__material6">Стекло</label>
+                                    </li>
+                                    <li class="filters__material-item filters__check-item">
+                                        <input type="checkbox" name="filter__material7" id="filter__material7" class="filters__check">
+                                        <label class="filters__check-label" for="filter__material7">Пластик</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="filters__btns accordion-item--no-open">
+                            <button class="filters__btn border-btn">Сбросить</button>
+                            <button class="filters__btn border-btn bg-btn">Найти</button>
+                        </li>
+                    </ul>
+                </section>
                 <ul class="catalog__list">
                     <li class="catalog__item">
                         <div class="catalog__item-img">

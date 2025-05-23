@@ -92,6 +92,39 @@
         }
     }
 }
+.accordion {
+    // .accordion__holder
+        &__holder {
+            gap: 1.5rem;
+        }
+}
+.accordion-title {
+    color: #000;
+    flex-basis: 93%;
+    font-size: 1rem;
+    
+    @include pc {
+        font-size: .9rem;
+    }
+    @include laptop {
+        font-size: .8rem;
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+}
+.accordion-bullet {
+    flex-basis: 7%;
+}
+.accordion-content {
+    color: #000;
+    margin-bottom: 0;
+    padding: 0 .4rem;
+}
+.accordion-content.opened {
+    padding: 1rem .4rem 1rem .4rem;
+}
 .filters {
     grid-column: 1 / 4;
     border-radius: 20px;
@@ -114,39 +147,6 @@
     }
     &__header {
         margin-bottom: 1.5rem;
-    }
-    .accordion {
-        // .accordion__holder
-            &__holder {
-                gap: 1.5rem;
-            }
-    }
-    .accordion-title {
-        color: #000;
-        flex-basis: 93%;
-        font-size: 1rem;
-        
-        @include pc {
-            font-size: .9rem;
-        }
-        @include laptop {
-            font-size: .8rem;
-        }
-        @include tablet {
-        }
-        @include mobile {
-        }
-    }
-    .accordion-bullet {
-        flex-basis: 7%;
-    }
-    .accordion-content {
-        color: #000;
-        margin-bottom: 0;
-        padding: 0 .4rem;
-    }
-    .accordion-content.opened {
-        padding: 1rem .4rem 1rem .4rem;
     }
     &__price-inps {
         display: flex;
@@ -269,6 +269,7 @@
         @include tablet {
             padding: 0.8rem 0;
             margin-bottom: 0;
+            padding-top: 0;
         }
         @include mobile {
         }
@@ -360,6 +361,17 @@
             height: 100%;
             object-fit: contain;
         }
+    }
+    &__filters-block {
+        max-height: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+        transition: all .3s;
+    }
+    &__filters-block.opened {
+        max-height: fit-content;
+        margin-bottom: 1.5rem;
+        visibility: visible;
     }
     &__list {
         display: grid;
