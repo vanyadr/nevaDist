@@ -403,6 +403,7 @@
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  aspect-ratio: 1/1.2;
 }
 .catalog__item-pic {
   width: 100%;
