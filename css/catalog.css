@@ -62,36 +62,33 @@
     height: 1rem;
   }
 }
-.accordion__holder {
+.catalog .accordion__holder, .filters .accordion__holder {
   gap: 1.5rem;
 }
-
-.accordion-title {
+.catalog .accordion-title, .filters .accordion-title {
   color: #000;
   flex-basis: 93%;
   font-size: 1rem;
 }
 @media (max-width: 1800px) {
-  .accordion-title {
+  .catalog .accordion-title, .filters .accordion-title {
     font-size: 0.9rem;
   }
 }
 @media (max-width: 1400px) {
-  .accordion-title {
+  .catalog .accordion-title, .filters .accordion-title {
     font-size: 0.8rem;
   }
 }
-.accordion-bullet {
+.catalog .accordion-bullet, .filters .accordion-bullet {
   flex-basis: 7%;
 }
-
-.accordion-content {
+.catalog .accordion-content, .filters .accordion-content {
   color: #000;
   margin-bottom: 0;
   padding: 0 0.4rem;
 }
-
-.accordion-content.opened {
+.catalog .accordion-content.opened, .filters .accordion-content.opened {
   padding: 1rem 0.4rem 1rem 0.4rem;
 }
 

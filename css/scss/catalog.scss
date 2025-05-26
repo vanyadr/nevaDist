@@ -92,38 +92,40 @@
         }
     }
 }
-.accordion {
-    // .accordion__holder
-        &__holder {
-            gap: 1.5rem;
+.catalog, .filters {
+    .accordion {
+        // .accordion__holder
+            &__holder {
+                gap: 1.5rem;
+            }
+    }
+    .accordion-title {
+        color: #000;
+        flex-basis: 93%;
+        font-size: 1rem;
+        
+        @include pc {
+            font-size: .9rem;
         }
-}
-.accordion-title {
-    color: #000;
-    flex-basis: 93%;
-    font-size: 1rem;
-    
-    @include pc {
-        font-size: .9rem;
+        @include laptop {
+            font-size: .8rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
-    @include laptop {
-        font-size: .8rem;
+    .accordion-bullet {
+        flex-basis: 7%;
     }
-    @include tablet {
+    .accordion-content {
+        color: #000;
+        margin-bottom: 0;
+        padding: 0 .4rem;
     }
-    @include mobile {
+    .accordion-content.opened {
+        padding: 1rem .4rem 1rem .4rem;
     }
-}
-.accordion-bullet {
-    flex-basis: 7%;
-}
-.accordion-content {
-    color: #000;
-    margin-bottom: 0;
-    padding: 0 .4rem;
-}
-.accordion-content.opened {
-    padding: 1rem .4rem 1rem .4rem;
 }
 .filters {
     grid-column: 1 / 4;
