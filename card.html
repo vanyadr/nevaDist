@@ -6,8 +6,12 @@
     <title>Neva Distillery</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/card.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
     <script type="module" src="js/script-card.js" defer></script>
 </head>
 <body>
@@ -332,6 +336,25 @@
             </section>
             <section class="nav-tree"></section>
             <section class="card grid">
+                <h1 class="card__title--mobile card__title">Тарелочка 2 дюйма, медная, колпачковая (1 колпачок)</h1>
+                <div class="card__slider card__slider--mobile">
+                    <div class="card__slide card__slide--1">
+                        <picture>
+                            <img src="images/bochki-s-varkoy2.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="card__slide card__slide--2">
+                        <picture>
+                            <img src="images/bochki-dubovie.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="card__slide card__slide--3">
+                        <picture>
+                            <img src="images/konveyer-s-bankami.jpg" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="card__bullets"></div>
                 <div class="card__img">
                     <div class="card__img-holder">
                         <img class="card__pic big" src="images/bochki-s-varkoy2.jpg" alt="">
@@ -347,26 +370,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card__img-points">
-                        <div class="card__img-point">
-                            <div class="card__img-bullet">
-                                <img src="images/garant-icon.svg" alt="">
-                            </div>
-                            <p class="card__img-text">Гарантия 1 год</p>
-                        </div>
-                        <div class="card__img-point">
-                            <div class="card__img-bullet">
-                                <img src="images/delivery-icon.svg" alt="">
-                            </div>
-                            <p class="card__img-text">Доставим на следующий день или в любой удобный день</p>
-                        </div>
-                        <div class="card__img-point">
-                            <div class="card__img-bullet">
-                                <img src="images/pay-icon.svg" alt="">
-                            </div>
-                            <p class="card__img-text">Бесплатная доставка по Санкт-Петербургу при заказе от 10 000 рублей</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="card__info">
                     <h1 class="card__title">Тарелочка 2 дюйма, медная, колпачковая (1 колпачок)</h1>
@@ -380,7 +383,14 @@
                         <button>Золото</button>
                         <button>Платина</button>
                     </div>
-                    <span class="card__price">980 руб.</span>
+                    <div class="card__price-holder">
+                        <span class="card__price">980 руб.</span>
+                        <div class="card__param-1 card__param-1--mobile">
+                            <button class="checked">100</button>
+                            <button>50</button>
+                            <span>вес / г</span>
+                        </div>
+                    </div>
                     <div class="card__btn-block">
                         <div class="card__activity">
                             <button class="card__to-cart border-btn">В корзину</button>
@@ -393,6 +403,26 @@
                             Количество товара на складе: 
                             <span>ограничено</span>
                         </p>
+                    </div>
+                </div>
+                <div class="card__img-points">
+                    <div class="card__img-point">
+                        <div class="card__img-bullet">
+                            <img src="images/garant-icon.svg" alt="">
+                        </div>
+                        <p class="card__img-text">Гарантия 1 год</p>
+                    </div>
+                    <div class="card__img-point">
+                        <div class="card__img-bullet">
+                            <img src="images/delivery-icon.svg" alt="">
+                        </div>
+                        <p class="card__img-text">Доставим на следующий день или в любой удобный день</p>
+                    </div>
+                    <div class="card__img-point">
+                        <div class="card__img-bullet">
+                            <img src="images/pay-icon.svg" alt="">
+                        </div>
+                        <p class="card__img-text">Бесплатная доставка по Санкт-Петербургу при заказе от 10 000 рублей</p>
                     </div>
                 </div>
             </section>
@@ -415,6 +445,46 @@
                         <div class="about__block">3</div>
                         <div class="about__block">4</div>
                     </div>
+                </div>
+                <div class="about__holder--mobile">
+                    <ul class="accordion__holder accrodion-holder">
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">ОПИСАНИЕ</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow-black.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                1
+                            </div>
+                        </li>
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">ДОСТАВКА</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow-black.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                2
+                            </div>
+                        </li>
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">ИНСТРУКЦИЯ</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow-black.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                3
+                            </div>
+                        </li>
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">ОТЗЫВЫ</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow-black.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                4
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <section class="else grid">
