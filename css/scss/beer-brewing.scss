@@ -1,0 +1,302 @@
+@mixin centerItem () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin pc {
+    @media (max-width: 1800px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobileAlbum {
+    @media (orientation: landscape) and (max-height: 768px) {
+        @content;
+    }
+}
+@mixin blockGap () {
+    margin-bottom: 8rem;
+    
+    @include pc {
+        margin-bottom: 8rem;
+    }
+    @include laptop {
+        margin-bottom: 6rem;
+    }
+    @include tablet {
+        margin-bottom: 4.5rem;
+    }
+    @include mobile {
+        margin-bottom: 1.5rem;
+    }
+}
+.main {
+    padding-bottom: 8rem;
+    padding-top: 5rem;
+    
+    @include pc {
+        padding-top: 7rem;
+        padding-bottom: 8rem;
+    }
+    @include laptop {
+        padding-top: 5rem;
+        padding-bottom: 6rem;
+    }
+    @include tablet {
+        padding-bottom: 4.5rem;
+    }
+    @include mobile {
+        padding-top: 3.5rem;
+        padding-bottom: 4rem;
+    }
+}
+.search {
+    grid-column: 1 / -1;
+    
+    &__search-inp {
+        width: 100%;
+        padding: .7rem;
+        font-weight: 400;
+        font-size: .6rem;
+        color: #776e65;
+        background: #f4f1f1;
+        border: 1px solid #e1dbdb;
+        border-radius: 10px;
+    }
+    &__search-inp-holder {
+        position: relative;
+    }
+    &__search-inp-holder::after {
+        content: '';
+        background: url(../images/search-icon.svg) no-repeat center / contain;
+        width: 1.4rem;
+        height: 1.4rem;
+        position: absolute;
+        right: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+        }
+        @include mobile {
+        }
+    }
+}
+.parts {
+    grid-column: 1 / -1;
+    @include blockGap();
+
+    .part {
+        height: 40rem;
+        border-bottom: 2px solid rgba(61, 49, 38, 0.5);
+        align-items: center;
+        padding: 5rem 0;
+        // .part__img
+        &__img {
+            grid-column: 1 / 8;
+            height: 100%;
+            overflow: hidden;
+        }
+        // .part__info
+        &__info {
+            grid-column: 8 / -1;
+            padding-left: 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        // .part__title
+        &__title {}
+        // .part__desc
+        &__desc {
+            line-height: 1.2;
+        }
+        // .part__btn
+        &__btn {
+            border-color: #3D3126;
+            color: #3D3126;
+        }
+    }
+    .part--1 {
+        background: url(../images/beer-breweries-bg.png) no-repeat -20% center / 70%;
+    }
+    .part--2 {
+        background: url(../images/ckt-bg.png) no-repeat 0 center / 60%;
+    }
+    .part--3 {
+        background: url(../images/accessories-bg.png) no-repeat 0 center / 60%;
+    }
+}
+.goods {
+    grid-column: 1 / -1;
+
+    &__title {
+        font-family: Inter, serif;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        font-weight: 500;
+        grid-column: 1 / -1;
+        margin-bottom: 3rem;
+        text-align: center;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        @include mobile {
+            margin-bottom: 1.5rem;
+        }
+    }
+    .catalog__list {
+        grid-column: 2 / 12;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 0.8rem;
+        row-gap: 1.5rem;
+        margin-bottom: 3rem;
+        
+        @include pc {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        @include laptop {
+            column-gap: 0.6rem;
+            row-gap: 1.2rem;
+        }
+        @include tablet {
+            grid-column: 1 / -1;
+            grid-template-columns: repeat(4, 1fr);
+            margin-bottom: 2rem;
+        }
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 0.4rem;
+            row-gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    // .catalog__item
+    .catalog__item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            gap: 0.6rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+    // .catalog__item-img
+    .catalog__item-img {
+        border: 1px solid #a98568;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 1 / 1.2;
+    }
+    // .catalog__item-like
+    .catalog__item-pic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform .3s;
+    }
+    .catalog__item-pic:hover {
+        transform: scale(1.05);
+    }
+    .catalog__item-like {
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+    // .catalog__item-name
+    .catalog__item-name {
+        line-height: 1.2;
+        font-size: .8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: .7rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .6rem;
+        }
+    }
+    // .catalog__item-price
+    .catalog__item-price {
+        font-weight: 600;
+        font-size: .8rem;
+        letter-spacing: -0.02em;
+        text-align: right;
+    }
+    // .catalog__item-btn
+    .catalog__item-btn {
+        width: 100%;
+        min-width: 0;
+        border: 1px solid #3D3126;
+        color: #3D3126;
+    }
+    &__more {
+        grid-column: 1 / -1;
+        @include centerItem();
+    }
+    &__more-link {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        
+        @include mobile {
+            gap: 0;
+        }
+        img {
+            width: 1.2rem;
+        }
+    }
+}
