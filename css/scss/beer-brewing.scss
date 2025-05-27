@@ -49,18 +49,18 @@
     padding-top: 5rem;
     
     @include pc {
-        padding-top: 7rem;
         padding-bottom: 8rem;
     }
     @include laptop {
-        padding-top: 5rem;
+        padding-top: 3.5rem;
         padding-bottom: 6rem;
     }
     @include tablet {
+        padding-top: 3rem;
         padding-bottom: 4.5rem;
     }
     @include mobile {
-        padding-top: 3.5rem;
+        padding-top: 2.5rem;
         padding-bottom: 4rem;
     }
 }
@@ -112,11 +112,50 @@
         border-bottom: 2px solid rgba(61, 49, 38, 0.5);
         align-items: center;
         padding: 5rem 0;
+        background: url(../images/accessories-bg.png) no-repeat 0 center / 60%;
+        
+        @include pc {
+            height: 31rem;
+            padding: 4.5rem 0;
+        }
+        @include laptop {
+            height: 21rem;
+            padding: 4rem 0;
+            background-position: -10% center;
+        }
+        @include tablet {
+            height: 19rem;
+            padding: 2.5rem 0;
+            background-position: 0 center;
+            background-size: 50%;
+        }
+        @include mobile {
+            height: 26rem;
+            padding: 2rem 0;
+            background-position: center -30%;
+            background-size: 120%;
+            row-gap: 0.8rem;
+        }
         // .part__img
         &__img {
             grid-column: 1 / 8;
             height: 100%;
             overflow: hidden;
+            
+            @include pc {
+                padding: 0 3rem;
+            }
+            @include laptop {
+                grid-column: 1 / 7;
+                padding: 0 1rem;
+            }
+            @include tablet {
+                grid-column: 1 / 5;
+                padding: 0;
+            }
+            @include mobile {
+                grid-column: 1 / -1;
+            }
         }
         // .part__info
         &__info {
@@ -126,9 +165,26 @@
             flex-direction: column;
             gap: 1.5rem;
             align-items: flex-start;
+            
+            @include pc {
+                padding-left: 2rem;
+            }
+            @include laptop {
+                grid-column: 7 / -1;
+                gap: 1.2rem;
+            }
+            @include tablet {
+                grid-column: 5 / -1;
+                padding-left: 1rem;
+                gap: .8rem;
+            }
+            @include mobile {
+                grid-column: 1 / -1;
+                padding: 0;
+            }
+
         }
         // .part__title
-        &__title {}
         // .part__desc
         &__desc {
             line-height: 1.2;
@@ -139,15 +195,35 @@
             color: #3D3126;
         }
     }
-    .part--1 {
-        background: url(../images/beer-breweries-bg.png) no-repeat -20% center / 70%;
-    }
-    .part--2 {
-        background: url(../images/ckt-bg.png) no-repeat 0 center / 60%;
-    }
-    .part--3 {
-        background: url(../images/accessories-bg.png) no-repeat 0 center / 60%;
-    }
+    // .part--1 {
+    //     background: url(../images/beer-breweries-bg.png) no-repeat -20% center / 70%;
+    // }
+    // .part--2 {
+    //     background: url(../images/ckt-bg.png) no-repeat 0 center / 60%;
+        
+    //     @include pc {
+    //     }
+    //     @include laptop {
+    //         background-position: -10% center;
+    //     }
+    //     @include tablet {
+    //     }
+    //     @include mobile {
+    //     }
+    // }
+    // .part--3 {
+    //     background: url(../images/accessories-bg.png) no-repeat 0 center / 60%;
+
+    //     @include pc {
+    //     }
+    //     @include laptop {
+    //         background-position: -10% center;
+    //     }
+    //     @include tablet {
+    //     }
+    //     @include mobile {
+    //     }
+    // }
 }
 .goods {
     grid-column: 1 / -1;
