@@ -66,6 +66,9 @@
     h2 {
         font-family: Inter, serif;
     }
+    button {
+        min-width: 0;
+    }
 }
 main {
     p, a, span, h1, h2, h3, h4, h5, h6 {
@@ -98,6 +101,18 @@ main {
     z-index: 4;
     transform: translateX(105%);
     transition: transform .3s ease, visibility .3s;
+    
+    @include pc {
+        width: 24rem;
+    }
+    @include laptop {
+        width: 18rem;
+    }
+    @include tablet {
+    }
+    @include mobile {
+        width: 100%;
+    }
     // .side-popup__title
     &__holder {
         position: relative;
@@ -109,6 +124,18 @@ main {
         justify-content: center;
         border-radius: 30px 0 0 30px;
         background: #fff;
+        
+        @include pc {
+            padding: 0 3.5rem;
+        }
+        @include laptop {
+            padding: 0 2rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            border-radius: 0;
+        }
     }
     &__closer {
         background: none;
@@ -125,6 +152,16 @@ main {
         font-size: 1.4rem;
         line-height: 1.2;
         margin-bottom: 0.8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1.2rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .side-popup__text
     &__text {
@@ -132,6 +169,16 @@ main {
         font-size: 1rem;
         line-height: 1.2;
         margin-bottom: 4.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: .8rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .side-popup__reg
     &__reg {
@@ -144,6 +191,16 @@ main {
         width: 100%;
         padding: 0.75rem;
         margin-bottom: 0.4rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: .7rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .side-popup__guest
     &__guest {
@@ -154,6 +211,16 @@ main {
         line-height: 1.2;
         font-size: 1rem;
         padding: 0.75rem;
+
+        @include pc {
+        }
+        @include laptop {
+            font-size: .7rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
 }
 .side-popup.active {
@@ -165,6 +232,17 @@ main {
 }
 .cart {
     @include blockGap();
+
+    @include pc {
+    }
+    @include laptop {
+    }
+    @include tablet {
+        row-gap: 1.2rem;
+    }
+    @include mobile {
+        padding: 0;
+    }
     // .cart__products
     &__products {
         grid-column: 1 / 8;
@@ -172,6 +250,17 @@ main {
         box-shadow: 1px 1px 60px 0 rgba(0, 0, 0, 0.04);
         background: #fff;
         padding: 1.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            grid-column: 1 / -1;
+        }
+        @include mobile {
+            padding: 1.5rem .5rem;
+        }
     }
     // .cart__title
     &__title {
@@ -201,11 +290,32 @@ main {
         display: flex;
         justify-content: space-between;
         height: 6rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            height: 5rem;
+        }
     }
     &__item-product {
         display: flex;
         gap: 1.2rem;
         height: 100%;
+        
+        @include pc {
+        }
+        @include laptop {
+            gap: .5rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            gap: .4rem;
+        }
     }
     // .cart__item-img
     &__item-img {
@@ -214,6 +324,16 @@ main {
         border: 1px solid rgba(169, 133, 104, 0.5);
         border-radius: 10px;
         padding: 1rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            height: 70%;
+        }
     }
     // .cart__item-info
     &__item-info {
@@ -226,12 +346,35 @@ main {
     &__item-name {
         font-size: 1rem;
         font-weight: 500;
+        line-height: 1.2;
+        
+        @include pc {
+            font-size: .8rem;
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .6rem;
+        }
     }
     // .cart__item-price
     &__item-price {
         font-weight: 600;
         font-size: 1rem;
         letter-spacing: -0.02em;
+        
+        @include pc {
+            font-size: .8rem;
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .7rem;
+        }
     }
     // .cart__item-btns
     &__item-btns {
@@ -262,10 +405,20 @@ main {
         gap: 0.6rem;
         height: 2rem;
         align-items: center;
-
+        
         span {
             font-size: .8rem;
             font-weight: 500;
+        }
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            height: 1.5rem;
         }
     }
     // .cart__item-minus
@@ -282,6 +435,16 @@ main {
         font-weight: 500;
         font-size: 1.4rem;
         margin-bottom: 1rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1.2rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .cart__addons-list
     &__addons-list {
@@ -289,6 +452,18 @@ main {
         column-gap: 0.6rem;
         row-gap: 1rem;
         grid-template-columns: repeat(3, 1fr);
+        
+        @include pc {
+        }
+        @include laptop {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
     // .cart__addons-item
     &__addons-item {
@@ -297,6 +472,16 @@ main {
         border: 1px solid rgba(169, 133, 104, 0.5);
         border-radius: 10px;
         padding: 0.8rem;
+        
+        @include pc {
+            padding: 0.8rem .5rem .5rem .5rem;
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .cart__addons-name
     &__addons-name {
@@ -336,6 +521,16 @@ main {
         height: 100%;
         width: 100%;
         position: relative;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            grid-column: 1 / -1;
+        }
+        @include mobile {
+        }
     }
     // .cart__summ-holder
     &__summ-holder {
@@ -389,6 +584,19 @@ main {
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            width: 50%;
+            align-self: flex-end;
+        }
+        @include mobile {
+            width: auto;
+            align-self: auto;
+        }
     }
     // .cart__summ-calc-item
     &__summ-calc-item {
@@ -404,6 +612,16 @@ main {
         font-weight: 400;
         font-size: 1rem;
         line-height: 1.2;
+        
+        @include pc {
+            font-size: .8rem;
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .cart__summ-calc-item-dots
     &__summ-calc-item-dots {
@@ -417,6 +635,16 @@ main {
         font-weight: 400;
         font-size: 1rem;
         line-height: 1.2;
+
+        @include pc {
+            font-size: .8rem;
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .cart__summ-calc-item--light
     &__summ-calc-item--light {
@@ -444,6 +672,16 @@ main {
         font-weight: 600;
         font-size: 1.2rem;
         line-height: 1.2;
+        
+        @include pc {
+            font-size: 1rem;
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .cart__summ-btn
     &__summ-btn {
@@ -454,6 +692,20 @@ main {
         font-size: 1rem;
         line-height: 1.2;
         width: 100%;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: .7rem;
+        }
+        @include tablet {
+            width: 50%;
+            align-self: flex-end;
+        }
+        @include mobile {
+            width: auto;
+            align-self: auto;
+        }
     }
 
 }
