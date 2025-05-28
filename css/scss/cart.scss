@@ -72,6 +72,94 @@ main {
         color: #000;
     }
 }
+.overlay-popup {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: rgba(#000, .3);
+    transition: opacity .3s ease, visibility .3s;
+}
+.overlay-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+.side-popup {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 31rem;
+    z-index: 4;
+    transform: translateX(105%);
+    transition: transform .3s ease, visibility .3s;
+    // .side-popup__title
+    &__holder {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 30px 0 0 30px;
+        background: #fff;
+    }
+    &__closer {
+        background: none;
+        border: none;
+        width: 1.2rem;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+    &__title {
+        font-family: Inter, serif;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+    }
+    // .side-popup__text
+    &__text {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 4.5rem;
+    }
+    // .side-popup__reg
+    &__reg {
+        color: #fff;
+        background: #3D3126;
+        border: none;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.2;
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 0.4rem;
+    }
+    // .side-popup__guest
+    &__guest {
+        width: 100%;
+        color: #3D3126;
+        border: 1px solid #3D3126;
+        font-weight: 400;
+        line-height: 1.2;
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+}
+.side-popup.active {
+    visibility: visible;
+    transform: translateX(0);
+}
 .nav-tree {
     margin-bottom: 3.5rem;
 }
