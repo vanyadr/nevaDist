@@ -1,0 +1,397 @@
+@mixin centerItem () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin pc {
+    @media (max-width: 1800px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobileAlbum {
+    @media (orientation: landscape) and (max-height: 768px) {
+        @content;
+    }
+}
+@mixin blockGap () {
+    margin-bottom: 8rem;
+    
+    @include pc {
+        margin-bottom: 8rem;
+    }
+    @include laptop {
+        margin-bottom: 6rem;
+    }
+    @include tablet {
+        margin-bottom: 4.5rem;
+    }
+    @include mobile {
+        margin-bottom: 1.5rem;
+    }
+}
+.main {
+    padding-bottom: 8rem;
+    padding-top: 5rem;
+    
+    @include pc {
+        padding-bottom: 8rem;
+    }
+    @include laptop {
+        padding-top: 3.5rem;
+        padding-bottom: 6rem;
+    }
+    @include tablet {
+        padding-top: 3rem;
+        padding-bottom: 4.5rem;
+    }
+    @include mobile {
+        padding-top: 2.8rem;
+        padding-bottom: 4rem;
+    }
+    h2 {
+        font-family: Inter, serif;
+    }
+    button {
+        min-width: 0;
+    }
+}
+main {
+    p, a, span, h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
+}
+.overlay-popup {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: rgba(#000, .3);
+    transition: opacity .3s ease, visibility .3s;
+}
+.overlay-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+.side-popup {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 31rem;
+    z-index: 4;
+    transform: translateX(105%);
+    transition: transform .3s ease, visibility .3s;
+    
+    @include pc {
+        width: 24rem;
+    }
+    @include laptop {
+        width: 18rem;
+    }
+    @include tablet {
+    }
+    @include mobile {
+        width: 100%;
+    }
+    // .side-popup__title
+    &__holder {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 0 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 30px 0 0 30px;
+        background: #fff;
+        
+        @include pc {
+            padding: 0 3.5rem;
+        }
+        @include laptop {
+            padding: 0 2rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            border-radius: 0;
+        }
+    }
+    &__closer {
+        background: none;
+        border: none;
+        width: 1.2rem;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+    &__title {
+        font-family: Inter, serif;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1.2rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+    // .side-popup__text
+    &__text {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 4.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: .8rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+    // .side-popup__reg
+    &__reg {
+        color: #fff;
+        background: #3D3126;
+        border: none;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.2;
+        width: 100%;
+        padding: 0.75rem;
+        margin-bottom: 0.4rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: .7rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+    // .side-popup__guest
+    &__guest {
+        width: 100%;
+        color: #3D3126;
+        border: 1px solid #3D3126;
+        font-weight: 400;
+        line-height: 1.2;
+        font-size: 1rem;
+        padding: 0.75rem;
+
+        @include pc {
+        }
+        @include laptop {
+            font-size: .7rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+}
+.side-popup.active {
+    visibility: visible;
+    transform: translateX(0);
+}
+.nav-tree {
+    margin-bottom: 3.5rem;
+
+    @include mobile {
+        display: none;
+    }
+}
+.search {
+    grid-column: 1 / -1;
+    @include blockGap();
+    display: none;
+    
+    @include mobile {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    &__search-inp {
+        width: 100%;
+        padding: .7rem;
+        font-weight: 400;
+        font-size: .6rem;
+        color: #776e65;
+        background: #f4f1f1;
+        border: 1px solid #e1dbdb;
+        border-radius: 10px;
+    }
+    &__search-inp-holder {
+        position: relative;
+    }
+    &__search-inp-holder::after {
+        content: '';
+        background: url(../images/search-icon.svg) no-repeat center / contain;
+        width: 1.4rem;
+        height: 1.4rem;
+        position: absolute;
+        right: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+        }
+        @include mobile {
+        }
+    }
+}
+.order {
+    @include blockGap();
+
+    @include pc {
+    }
+    @include laptop {
+    }
+    @include tablet {
+        row-gap: 1.2rem;
+    }
+    @include mobile {
+        padding: 0;
+    }
+    // .cart__products
+    &__finish {
+        grid-column: 1 / -1;
+        border-radius: 20px;
+        box-shadow: 1px 1px 60px 0 rgba(0, 0, 0, 0.04);
+        background: #fff;
+        padding: 1.5rem 30rem;
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        
+        @include pc {
+            padding: 1.5rem 21rem;
+        }
+        @include laptop {
+            padding: 1.5rem 15rem;
+        }
+        @include tablet {
+            padding: 1.5rem 10rem;
+            gap: 1.5rem;
+        }
+        @include mobile {
+            padding: 1.5rem 1rem;
+            min-height: 80vh;
+        }
+    }
+    // .cart__title
+    &__title {
+        font-family: Inter, serif;
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 142%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        
+        span {
+            font-size: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+            font-weight: inherit;
+        }
+        
+        @include laptop {
+            font-size: 1.6rem;
+        }
+        @include tablet {
+            font-size: 1rem;
+        }
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+    &__info {
+        text-align: center;
+        line-height: 120%;
+        font-size: 1rem;
+        
+        @include pc {
+            padding: 0 3rem;
+        }
+        @include laptop {
+            font-size: .8rem;
+            padding: 0;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .7rem;
+        }
+    }
+    &__main-btn {
+        color: #000;
+        border: none;
+        font-size: 1rem;
+        padding: .7rem .5rem;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+            height: 1.2rem;
+            width: 1.2rem;
+        }
+
+        @include laptop {
+            font-size: .8rem;
+        }
+        @include tablet {
+            padding: 0.5rem;
+        }
+        @include mobile {
+            font-size: .7rem;
+        }
+    }
+    &__main-btn:hover {
+        background: none;
+    }
+}
