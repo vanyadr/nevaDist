@@ -254,17 +254,29 @@ main {
         @include pc {
         }
         @include laptop {
+            padding: 0.8rem;
         }
         @include tablet {
             grid-column: 1 / -1;
         }
         @include mobile {
-            padding: 1.5rem .5rem;
+            padding: 1rem;
         }
     }
     // .order__title
     &__title {
         margin-bottom: 1.5rem;
+
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1.8rem;
+        }
+        @include tablet {
+            font-size: 1.4rem;
+        }
+        @include mobile {
+        }
     }
     // .order__list
     &__list {
@@ -276,13 +288,14 @@ main {
     &__item {
         
         @include pc {
+            max-width: 80%;
         }
         @include laptop {
+            max-width: 100%;
         }
         @include tablet {
         }
         @include mobile {
-            height: 5rem;
         }
     }
     // .order__item-header
@@ -291,9 +304,19 @@ main {
         gap: 0.8rem;
         align-items: center;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1rem;
         line-height: 120%;
         margin-bottom: 1.2rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .8rem;
+        }
     }
     // .order__num
     &__num {
@@ -318,11 +341,36 @@ main {
         padding-left: 0.8rem;
         padding-right: 2.5rem;
         border-left: 1px solid rgba(61, 49, 38, 0.5);
+        
+        @include pc {
+            padding-right: 0rem;
+        }
+        @include laptop {
+            padding-right: 1.5rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
     }
     // .order__person-type-selector
     &__person-type-selector {
         display: flex;
         gap: 0.2rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            width: 100%;
+            justify-content: space-between;
+        }
     }
     // .order__person-type-btn
     &__person-type-btn {
@@ -331,6 +379,16 @@ main {
         color: #3D3126;
         border-color: #3D3126;
         padding: 0.4rem 0.6rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .6rem;
+        }
     }
     &__person-type-btn.active {
         color: #fff;
@@ -351,6 +409,34 @@ main {
         gap: 3rem;
         height: 2.4rem;
         align-items: center;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            flex-direction: column;
+            height: auto;
+            gap: .4rem;
+            align-items: flex-start;
+
+            .order__option {
+                height: 2.4rem;
+            }
+        }
+    }
+    &__pay {
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            gap: 0.4rem;
+        }
+        @include mobile {
+        }
     }
 		// .order__by-myself-info
     &__by-myself-info {
@@ -372,18 +458,28 @@ main {
         font-size: .8rem;
     }
 
-    &__form input {
+    &__item input {
         padding: 0.5rem;
         border-bottom: 1px solid rgba(61, 49, 38, 0.5);
         font-weight: 400;
         font-size: .8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .7rem;
+        }
     }
-    &__form input:disabled {
+    &__item input:disabled {
         background: none;
         opacity: 0.4;
     }
-    &__form input[type="radio"],
-    &__form input[type="checkbox"],
+    &__item input[type="radio"],
+    &__item input[type="checkbox"],
     input[type="radio"] {
         // appearance: none;
         width: 1rem;
@@ -391,10 +487,20 @@ main {
         accent-color: #3D3126;
         cursor: pointer;
     }
-    &__form label {
+    &__item label {
         display: block;
         cursor: pointer;
         font-size: .8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .7rem;
+        }
     }
     &__option {
         display: flex;
@@ -405,8 +511,6 @@ main {
         padding: 0.5rem 0;
     }
     // .order__person-data-form
-    &__person-data-form {}
-    &__delivery-form {}
     &__pay-form {
         display: block;
     }
@@ -432,6 +536,19 @@ main {
     }
     &__item-pay {
         max-width: 60%;
+        
+        @include pc {
+            max-width: 80%;
+        }
+        @include laptop {
+            max-width: 100%;
+            padding-right: 1.5rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            padding: 0;
+        }
 
         .order__form-holder {
             padding-right: 0;
@@ -440,6 +557,16 @@ main {
     }
     &__to-pay-btn-holder {
         padding-left: 1.5rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            padding: 0;
+        }
     }
     &__to-pay-btn {
         width: 100%;
@@ -447,6 +574,17 @@ main {
         font-weight: 400;
         font-size: 1rem;
         padding: 1rem;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .7rem;
+            padding: 0.7rem;
+        }
     }
 
 
@@ -485,6 +623,16 @@ main {
         font-weight: 600;
         font-size: 1.4rem;
         line-height: 1.2;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            font-size: 1rem;
+        }
+        @include mobile {
+        }
     }
     // .order__summ-promo
     &__summ-promo {
@@ -526,7 +674,6 @@ main {
         }
         @include tablet {
             width: 50%;
-            align-self: flex-end;
         }
         @include mobile {
             width: auto;
