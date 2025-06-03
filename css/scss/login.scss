@@ -1,0 +1,330 @@
+@mixin centerItem () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin pc {
+    @media (max-width: 1800px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobileAlbum {
+    @media (orientation: landscape) and (max-height: 768px) {
+        @content;
+    }
+}
+@mixin blockGap () {
+    margin-bottom: 8rem;
+    
+    @include pc {
+        margin-bottom: 8rem;
+    }
+    @include laptop {
+        margin-bottom: 6rem;
+    }
+    @include tablet {
+        margin-bottom: 4.5rem;
+    }
+    @include mobile {
+        margin-bottom: 1.5rem;
+    }
+}
+.main {
+    padding-bottom: 8rem;
+    padding-top: 5rem;
+    
+    @include pc {
+        padding-bottom: 8rem;
+    }
+    @include laptop {
+        padding-top: 3.5rem;
+        padding-bottom: 6rem;
+    }
+    @include tablet {
+        padding-top: 3rem;
+        padding-bottom: 4.5rem;
+    }
+    @include mobile {
+        padding-top: 2.5rem;
+        padding-bottom: 4rem;
+    }
+    h2 {
+        font-family: Inter, serif;
+    }
+    button {
+        min-width: 0;
+    }
+}
+main {
+    p, a, span, h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    @include pc {
+    }
+    @include laptop {
+        gap: .8rem;
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+
+    input {
+        padding: 0.5rem;
+        border-bottom: 1px solid #000;
+        font-weight: 400;
+        font-size: .8rem;
+        border-radius: 0;
+        background: none;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: .6rem;
+            padding: 0.4rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+    input:placeholder-shown {
+        border-color: rgba(61, 49, 38, 0.5);
+    }
+    input:focus {
+        border-color: #000;
+    }
+    input.invalid {
+        border-color: #F00000;
+        background: rgba(240, 0, 0, 0.1);
+        color: #F00000;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        // appearance: none;
+        width: .9rem;
+        height: .9rem;
+        accent-color: #3D3126;
+        border: 2px solid #3D3126;
+        border-radius: 2px;
+        cursor: pointer;
+        appearance: none;
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        flex-shrink: 0;
+    }
+    input[type="checkbox"]:checked {
+        background: #3D3126;
+    }
+    input[type="checkbox"]::after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+        background: url(../images/tick.svg) no-repeat center / 70%;
+    }
+    input[type=checkbox]:checked::after {
+        width: .9rem;
+        height: .9rem;
+    }
+    label {
+        display: block;
+        cursor: pointer;
+        font-size: .8rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: .7rem;
+        }
+    }
+    label.personal-data-check {
+        font-size: .6rem;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.5);
+        padding-right: 4rem;
+        line-height: 120%;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: .5rem;
+            padding-right: 0;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+
+        a {
+            font-size: inherit;
+            font-weight: inherit;
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+    &__option {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+    }
+    &__option.personal-data-check {
+        align-items: flex-start;
+    }
+    // .form__btn
+    &__btn.reg__btn {
+        padding-top: 4rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            padding-top: 3.2rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+    // .form__submit-btn
+    &__submit-btn {
+        width: 100%;
+        background: #3D3126;
+        font-weight: 400;
+        font-size: 1rem;
+        padding: 1rem;
+
+        @include pc {
+        }
+        @include laptop {
+            font-size: .6rem;
+            padding: 0.7rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+}
+.login {
+    &__holder {
+        border-radius: 20px;
+        box-shadow: 1px 1px 60px 0 rgba(0, 0, 0, 0.04);
+        background: #fff;
+        padding: 1.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            padding: 1rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+    // .reg__form
+    &__form {
+        grid-column: 1 / 5;
+        padding: 0 2.5rem;
+        
+        @include pc {
+            grid-column: 1 / 6;
+            padding: 0 1.5rem;
+        }
+        @include laptop {
+            grid-column: 2 / 6;
+            padding: 0;
+        }
+        @include tablet {
+            grid-column: 3 / 7;
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+        }
+    }
+    // .reg__title
+    &__title {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            margin-bottom: 3rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    &__btn-reg {
+        background: none;
+        border: 1px solid #3D3126;
+        color: #3D3126;
+    }
+    &__btn-reg:hover {
+        background: none;
+    }
+    &__btn-forgot {
+        background: none;
+        color: #A98568;
+    }
+    &__btn-forgot:hover {
+        background: none;
+    }
+    // .reg__pic
+    &__pic {
+        grid-column: 7 / 12;
+        padding: 0 2.5rem;
+        height: 100%;
+        @include centerItem();
+        
+        @include pc {
+            grid-column: 7 / -1;
+            padding: 0 1.5rem;
+        }
+        @include laptop {
+            grid-column: 7 / 12;
+            padding: 0;
+        }
+        @include tablet {
+            display: none;
+        }
+        @include mobile {
+        }
+    }
+}
