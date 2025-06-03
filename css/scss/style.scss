@@ -719,6 +719,25 @@ img {
     margin-bottom: .8rem;
     line-height: 2;
 }
+.main {
+    padding-bottom: 8rem;
+    padding-top: 5.5rem;
+    
+    @include pc {
+    }
+    @include laptop {
+        padding-top: 4.5rem;
+        padding-bottom: 6rem;
+    }
+    @include tablet {
+        padding-top: 3.5rem;
+        padding-bottom: 4.5rem;
+    }
+    @include mobile {
+        padding-top: 2.5rem;
+        padding-bottom: 4rem;
+    }
+}
 .footer {
     background: #3D3126;
     padding: 3rem 0;

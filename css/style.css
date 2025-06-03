@@ -731,6 +731,29 @@ img {
   line-height: 2;
 }
 
+.main {
+  padding-bottom: 8rem;
+  padding-top: 5.5rem;
+}
+@media (max-width: 1400px) {
+  .main {
+    padding-top: 4.5rem;
+    padding-bottom: 6rem;
+  }
+}
+@media (max-width: 1024px) {
+  .main {
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+}
+
 .footer {
   background: #3D3126;
   padding: 3rem 0;

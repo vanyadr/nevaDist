@@ -46,7 +46,6 @@
 }
 
 .hero {
-    padding-top: 5rem;
     @include blockGap();
     row-gap: 0.4rem;
     
@@ -55,10 +54,8 @@
     @include laptop {
     }
     @include tablet {
-        padding-top: 3rem;
     }
     @include mobile {
-        padding-top: 4rem;
     }
     // .hero__slider
     &__slider {

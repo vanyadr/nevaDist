@@ -44,22 +44,6 @@
         margin-bottom: 1.5rem;
     }
 }
-.main {
-    padding-bottom: 8rem;
-
-    @include pc {
-        padding-bottom: 8rem;
-    }
-    @include laptop {
-        padding-bottom: 6rem;
-    }
-    @include tablet {
-        padding-bottom: 4.5rem;
-    }
-    @include mobile {
-        padding-bottom: 4rem;
-    }
-}
 .search {
     grid-column: 1 / -1;
     @include blockGap();
@@ -67,7 +51,6 @@
     
     @include mobile {
         display: block;
-        padding-top: 3.5rem;
     }
     
     &__search-inp {
@@ -109,20 +92,17 @@
 .card {
     grid-column: 1 / -1;
     @include blockGap();
-    padding-top: 7rem;
     row-gap: 1rem;
     
     @include pc {
     }
     @include laptop {
-        padding-top: 5rem;
         row-gap: 3rem;
     }
     @include tablet {
         row-gap: 2rem;
     }
     @include mobile {
-        padding-top: 0;
         row-gap: 1.2rem;
     }
     // .card__img

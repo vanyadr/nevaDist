@@ -227,13 +227,6 @@ main {
     visibility: visible;
     transform: translateX(0);
 }
-.nav-tree {
-    margin-bottom: 3.5rem;
-
-    @include mobile {
-        display: none;
-    }
-}
 .search {
     grid-column: 1 / -1;
     @include blockGap();
@@ -299,19 +292,25 @@ main {
         border-radius: 20px;
         box-shadow: 1px 1px 60px 0 rgba(0, 0, 0, 0.04);
         background: #fff;
-        padding: 1.5rem;
-        min-height: 70vh;
+        padding: 16rem 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2rem;
         
+        @include pc {
+            padding: 12rem 1.5rem;
+        }
+        @include laptop {
+            padding: 10rem 1.5rem;
+        }
         @include tablet {
+            padding: 8rem 1.5rem;
             gap: 1.5rem;
         }
         @include mobile {
-            min-height: 80vh;
+            padding: 11rem 1.5rem;
         }
     }
     // .cart__title
