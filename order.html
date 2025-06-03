@@ -385,19 +385,19 @@
                             <div class="order__form-holder">
                                 <div class="order__delivery">
                                     <div class="order__option">
-                                        <input type="radio" name="delivery" id="order__delivery1" value="by-myself">
+                                        <input type="radio" name="delivery" id="order__delivery1" value="by-myself" data-delivery="by-myself">
                                         <label for="order__delivery1">Самовывоз</label>
                                     </div>
                                     <div class="order__option">
-                                        <input type="radio" name="delivery" id="order__delivery2" value="by-tc" checked>
+                                        <input type="radio" name="delivery" id="order__delivery2" value="by-tc" data-delivery="tk" checked>
                                         <label for="order__delivery2">Транспортная компания</label>
                                     </div>
                                 </div>
-                                <form action="" class="order__form order__delivery-form">
+                                <form action="" class="order__form order__delivery-form" data-delivery="tk">
                                     <input type="text" name="address" id="order__address" placeholder="Адрес доставки">
                                     <input type="text" name="comm" id="order__comm" placeholder="Комментарий">
                                 </form>
-                                <div class="order__delivery-form order__by-myself-info hide">
+                                <div class="order__delivery-form order__by-myself-info hide" data-delivery="by-myself">
                                     <a href="#" class="order__map-link">Показать на карте</a>
                                     <p class="order__by-myself-text">По адресу: г. Санкт-Петербург ул. Комсомола, дом 1/3</p>
                                     <p class="order__by-myself-text">Часы работы: ПН-ПТ с 10:00 до 19:00</p>

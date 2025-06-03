@@ -29,9 +29,17 @@ export const orderType = function () {
         });
     });
     
+    let currentBtn;
+    deliveryTypeBtns.forEach(item => {if (item.hasAttribute('checked')) currentBtn = item});
     deliveryTypeBtns.forEach((btn) => {
         btn.addEventListener('click', function () {
-            deliveryForms.forEach((form) => {form.classList.toggle('hide')});
+            if (currentBtn != btn) {
+                deliveryForms.forEach(form => {
+                    if (form.classList&&!form.classList.contains('hide')) form.classList.add('hide');
+                })
+                document.querySelector(`.order__delivery-form[data-delivery="${btn.dataset.delivery}"]`).classList.remove('hide');
+                currentBtn = btn;
+            }
         });
     });
 };

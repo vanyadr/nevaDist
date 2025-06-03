@@ -399,12 +399,63 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
   background: none;
   opacity: 0.4;
 }
-.order__item input[type=radio], .order__item input[type=checkbox],
 .order input[type=radio] {
-  width: 1rem;
-  height: 1rem;
+  width: 0.9rem;
+  height: 0.9rem;
   accent-color: #3D3126;
+  padding: 0;
+  flex-shrink: 0;
   cursor: pointer;
+  appearance: none;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #3D3126;
+  border-radius: 50%;
+}
+.order input[type=radio]::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  border: 2px solid #fff;
+  background: #3D3126;
+  border-radius: 50%;
+}
+.order input[type=radio]:checked::after {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.order input[type=checkbox] {
+  width: 0.9rem;
+  height: 0.9rem;
+  accent-color: #3D3126;
+  border: 2px solid #3D3126;
+  border-radius: 2px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  flex-shrink: 0;
+}
+.order input[type=checkbox]:checked {
+  background: #3D3126;
+}
+.order input[type=checkbox]::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  background: url(../images/tick.svg) no-repeat center/70%;
+}
+.order input[type=checkbox]:checked::after {
+  width: 0.9rem;
+  height: 0.9rem;
 }
 .order__item label {
   display: block;
