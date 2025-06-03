@@ -1,0 +1,128 @@
+@mixin centerItem () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin pc {
+    @media (max-width: 1800px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobileAlbum {
+    @media (orientation: landscape) and (max-height: 768px) {
+        @content;
+    }
+}
+@mixin blockGap () {
+    margin-bottom: 8rem;
+    
+    @include pc {
+        margin-bottom: 8rem;
+    }
+    @include laptop {
+        margin-bottom: 6rem;
+    }
+    @include tablet {
+        margin-bottom: 4.5rem;
+    }
+    @include mobile {
+        margin-bottom: 1.5rem;
+    }
+}
+main {
+    p, a, span, h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
+}
+.success {
+    @include blockGap();
+
+    @include pc {
+    }
+    @include laptop {
+    }
+    @include tablet {
+        row-gap: 1.2rem;
+    }
+    @include mobile {
+        padding: 0;
+    }
+    // .cart__products
+    &__banner {
+        grid-column: 1 / -1;
+        border-radius: 20px;
+        box-shadow: 1px 1px 60px 0 rgba(0, 0, 0, 0.04);
+        background: #fff;
+        padding: 16rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        
+        @include pc {
+            padding: 12rem 1.5rem;
+        }
+        @include laptop {
+            padding: 10rem 1.5rem;
+        }
+        @include tablet {
+            padding: 8rem 1.5rem;
+            gap: 1.5rem;
+        }
+        @include mobile {
+            padding: 11rem 1.5rem;
+        }
+    }
+    // .cart__title
+    &__title {
+        font-family: Inter, serif;
+        font-size: 1.8rem;
+        line-height: 142%;
+        letter-spacing: -0.02em;
+        color: #3d3126;
+        
+        @include pc {
+            font-size: 1.4rem;
+        }
+        @include laptop {
+            font-size: 1rem;
+        }
+        @include tablet {
+            font-size: .9rem;
+        }
+        @include mobile {
+            font-size: .8rem;
+        }
+    }
+    &__catalog-btn {
+        color: #3D3126;
+        border: 1px solid #3D3126;
+        font-size: .7rem;
+        padding: .7rem .5rem;
+        
+        @include laptop {
+            font-size: .6rem;
+        }
+        @include tablet {
+            padding: 0.5rem;
+        }
+        @include mobile {
+        }
+    }
+}

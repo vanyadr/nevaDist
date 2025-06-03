@@ -1,0 +1,115 @@
+main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #000;
+}
+
+.success {
+  margin-bottom: 8rem;
+}
+@media (max-width: 1800px) {
+  .success {
+    margin-bottom: 8rem;
+  }
+}
+@media (max-width: 1400px) {
+  .success {
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 1024px) {
+  .success {
+    margin-bottom: 4.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .success {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .success {
+    row-gap: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .success {
+    padding: 0;
+  }
+}
+.success__banner {
+  grid-column: 1/-1;
+  border-radius: 20px;
+  box-shadow: 1px 1px 60px 0 rgba(0, 0, 0, 0.04);
+  background: #fff;
+  padding: 16rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 1800px) {
+  .success__banner {
+    padding: 12rem 1.5rem;
+  }
+}
+@media (max-width: 1400px) {
+  .success__banner {
+    padding: 10rem 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .success__banner {
+    padding: 8rem 1.5rem;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .success__banner {
+    padding: 11rem 1.5rem;
+  }
+}
+.success__title {
+  font-family: Inter, serif;
+  font-size: 1.8rem;
+  line-height: 142%;
+  letter-spacing: -0.02em;
+  color: #3d3126;
+}
+@media (max-width: 1800px) {
+  .success__title {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 1400px) {
+  .success__title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .success__title {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .success__title {
+    font-size: 0.8rem;
+  }
+}
+.success__catalog-btn {
+  color: #3D3126;
+  border: 1px solid #3D3126;
+  font-size: 0.7rem;
+  padding: 0.7rem 0.5rem;
+}
+@media (max-width: 1400px) {
+  .success__catalog-btn {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 1024px) {
+  .success__catalog-btn {
+    padding: 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=pass-success.css.map */

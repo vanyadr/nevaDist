@@ -44,32 +44,6 @@
         margin-bottom: 1.5rem;
     }
 }
-.main {
-    padding-bottom: 8rem;
-    padding-top: 5rem;
-    
-    @include pc {
-        padding-bottom: 8rem;
-    }
-    @include laptop {
-        padding-top: 3.5rem;
-        padding-bottom: 6rem;
-    }
-    @include tablet {
-        padding-top: 3rem;
-        padding-bottom: 4.5rem;
-    }
-    @include mobile {
-        padding-top: 2.8rem;
-        padding-bottom: 4rem;
-    }
-    h2 {
-        font-family: Inter, serif;
-    }
-    button {
-        min-width: 0;
-    }
-}
 main {
     p, a, span, h1, h2, h3, h4, h5, h6 {
         color: #000;
