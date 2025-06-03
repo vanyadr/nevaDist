@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pass-recovery.css">
-    <script type="module" src="js/script-pass-recovery.js" defer></script>
+    <link rel="stylesheet" href="css/pass-new.css">
+    <script type="module" src="js/script-pass-new.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -326,22 +326,20 @@
         </header>
         <main class="main">
             <section class="nav-tree container"></section>
-            <section class="recovery container">
-                <div class="recovery__holder grid">
-                    <div class="recovery__form">
-                        <h1 class="recovery__title">Восстановление пароля</h1>
-                        <form action="" class="recovery__person-data-form form">
-                            <div class="form__option">
-                                <input type="email" name="email" id="recovery__email" placeholder="Email">
-                                <label for="email">На вашу почту придет письмо с новым паролем</label>
-                            </div>
-                            <div class="form__btn login__btns">
-                                <a href="#" class="form__submit-btn recovery__btn border-btn">Далее</a>
-                                <a href="#" class="form__submit-btn recovery__btn-back border-btn">Назад</a>
+            <section class="new container">
+                <div class="new__holder grid">
+                    <div class="new__form">
+                        <h1 class="new__title">Восстановление пароля</h1>
+                        <form action="" class="new__person-data-form form">
+                            <input type="password" name="password" id="new__pass" placeholder="Новый пароль">
+                            <input type="password" name="return-password" id="new__pass-return" placeholder="Повторите пароль">
+                            <div class="form__btn new__btns">
+                                <a href="#" class="form__submit-btn new__btn border-btn">Далее</a>
+                                <a href="#" class="form__submit-btn new__btn-back border-btn">Назад</a>
                             </div>
                         </form>
                     </div>
-                    <div class="recovery__pic">
+                    <div class="new__pic">
                         <picture>
                             <img src="images/kollazh-oborudovaniya.png" alt="">
                         </picture>

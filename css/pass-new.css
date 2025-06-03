@@ -12,12 +12,7 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-@media (max-width: 1400px) {
-  .form {
-    gap: 4rem;
-  }
+  gap: 1.5rem;
 }
 .form input {
   padding: 0.5rem;
@@ -136,72 +131,73 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
     padding: 0.7rem;
   }
 }
-.recovery__holder {
+.new__holder {
   border-radius: 20px;
   box-shadow: 1px 1px 60px 0 rgba(0, 0, 0, 0.04);
   background: #fff;
   padding: 1.5rem;
 }
 @media (max-width: 1400px) {
-  .recovery__holder {
+  .new__holder {
     padding: 1rem;
   }
 }
-.recovery__form {
+.new__form {
   grid-column: 1/5;
   padding: 0 2.5rem;
-  padding-bottom: 9rem;
+  padding-bottom: 5.5rem;
 }
 @media (max-width: 1800px) {
-  .recovery__form {
+  .new__form {
     grid-column: 1/6;
     padding: 0 1.5rem;
-    padding-bottom: 7rem;
-  }
-}
-@media (max-width: 1400px) {
-  .recovery__form {
-    grid-column: 2/6;
-    padding: 0;
     padding-bottom: 4rem;
   }
 }
+@media (max-width: 1400px) {
+  .new__form {
+    grid-column: 2/6;
+    padding: 0;
+    padding-bottom: 3rem;
+  }
+}
 @media (max-width: 1024px) {
-  .recovery__form {
+  .new__form {
     grid-column: 3/7;
     padding-bottom: 4rem;
     padding-top: 4rem;
   }
 }
 @media (max-width: 768px) {
-  .recovery__form {
+  .new__form {
     padding-bottom: 5rem;
     padding-top: 5rem;
     grid-column: 1/-1;
   }
 }
-.recovery__title {
+.new__title {
   text-align: center;
   margin-bottom: 3.5rem;
 }
 @media (max-width: 1400px) {
-  .recovery__title {
+  .new__title {
     margin-bottom: 3rem;
   }
 }
-.recovery__btns {
+.new__btns {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  padding-top: 2rem;
 }
-.recovery__btn-back {
+.new__btn-back {
   background: none;
   color: #A98568;
 }
-.recovery__btn-back:hover {
+.new__btn-back:hover {
   background: none;
 }
-.recovery__pic {
+.new__pic {
   grid-column: 7/12;
   padding: 0 2.5rem;
   height: 100%;
@@ -210,21 +206,21 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
   align-items: center;
 }
 @media (max-width: 1800px) {
-  .recovery__pic {
+  .new__pic {
     grid-column: 7/-1;
     padding: 0 1.5rem;
   }
 }
 @media (max-width: 1400px) {
-  .recovery__pic {
+  .new__pic {
     grid-column: 7/12;
     padding: 0;
   }
 }
 @media (max-width: 1024px) {
-  .recovery__pic {
+  .new__pic {
     display: none;
   }
 }
 
-/*# sourceMappingURL=pass-recovery.css.map */
+/*# sourceMappingURL=pass-new.css.map */
