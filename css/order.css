@@ -388,6 +388,7 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
   border-bottom: 1px solid rgba(61, 49, 38, 0.5);
   font-weight: 400;
   font-size: 0.8rem;
+  border-radius: 0;
 }
 @media (max-width: 768px) {
   .order__item input {

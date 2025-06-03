@@ -463,6 +463,7 @@ main {
         border-bottom: 1px solid rgba(61, 49, 38, 0.5);
         font-weight: 400;
         font-size: .8rem;
+        border-radius: 0;
         
         @include pc {
         }
