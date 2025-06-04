@@ -1,0 +1,110 @@
+main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 {
+  color: #000;
+}
+
+.post__holder {
+  border-radius: 20px;
+  box-shadow: 1px 1px 60px 0 rgba(0, 0, 0, 0.04);
+  background: #fff;
+  padding: 1.5rem;
+}
+@media (max-width: 768px) {
+  .post__holder {
+    padding: 1.5rem 0.5rem;
+  }
+}
+.post__articles h2, .post__articles h3, .post__articles h4, .post__articles h5, .post__articles h6 {
+  font-family: Inter, sans-serif;
+}
+.post__articles h2 {
+  padding-top: 3rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 120%;
+}
+@media (max-width: 1400px) {
+  .post__articles h2 {
+    padding-top: 2rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .post__articles h2 {
+    padding-top: 1.5rem;
+  }
+}
+.post__articles h3 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 120%;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+@media (max-width: 1400px) {
+  .post__articles h3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .post__articles h3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+}
+.post__articles h4 {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 120%;
+}
+@media (max-width: 1400px) {
+  .post__articles h4 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .post__articles h4 {
+    font-size: 0.8rem;
+  }
+}
+.post__articles h5 {
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 120%;
+}
+@media (max-width: 768px) {
+  .post__articles h5 {
+    font-size: 0.8rem;
+  }
+}
+.post__articles h6 {
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 120%;
+}
+.post__articles p, .post__articles a, .post__articles span, .post__articles li {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 120%;
+}
+@media (max-width: 768px) {
+  .post__articles p, .post__articles a, .post__articles span, .post__articles li {
+    font-size: 0.7rem;
+  }
+}
+.post__articles ul {
+  padding: 1rem 0;
+}
+.post__articles ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.post__articles ol {
+  padding: 1rem 0;
+  list-style: decimal;
+  list-style-position: inside;
+}
+
+/*# sourceMappingURL=info.css.map */

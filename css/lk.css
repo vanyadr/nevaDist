@@ -96,6 +96,11 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
     font-size: 0.8rem;
   }
 }
+@media (max-width: 768px) {
+  .lk-menu__item-title {
+    font-size: 0.7rem;
+  }
+}
 .lk-menu__item-subtitle {
   font-weight: 400;
   font-size: 0.8rem;

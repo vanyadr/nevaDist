@@ -1,0 +1,163 @@
+@mixin centerItem () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin pc {
+    @media (max-width: 1800px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobileAlbum {
+    @media (orientation: landscape) and (max-height: 768px) {
+        @content;
+    }
+}
+@mixin blockGap () {
+    margin-bottom: 8rem;
+    
+    @include pc {
+        margin-bottom: 8rem;
+    }
+    @include laptop {
+        margin-bottom: 6rem;
+    }
+    @include tablet {
+        margin-bottom: 4.5rem;
+    }
+    @include mobile {
+        margin-bottom: 1.5rem;
+    }
+}
+main {
+    p, a, span, h1, h2, h3, h4, h5, h6 {
+        color: #000;
+    }
+}
+.post {
+    &__holder {
+        border-radius: 20px;
+        box-shadow: 1px 1px 60px 0 rgba(0, 0, 0, 0.04);
+        background: #fff;
+        padding: 1.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            padding: 1.5rem .5rem;
+        }
+    }
+    &__title {
+    }
+    &__articles {
+        h2, h3, h4, h5, h6 {
+            font-family: Inter, sans-serif;
+        }
+        h2 {
+            padding-top: 3rem;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 120%;
+            
+            @include laptop {
+                padding-top: 2rem;
+                font-size: 1rem;
+            }
+            @include tablet {
+                padding-top: 1.5rem;
+            }
+            @include mobile {
+            }
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 120%;
+            padding-top: 2rem;
+            padding-bottom: 1.5rem;
+            
+            @include laptop {
+                padding-top: 1.5rem;
+                padding-bottom: 1rem;
+                font-size: .9rem;
+            }
+            @include tablet {
+            }
+            @include mobile {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                font-size: .8rem;
+            }
+        }
+        h4 {
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 120%;
+
+            @include laptop {
+                font-size: .9rem;
+            }
+            @include tablet {
+            }
+            @include mobile {
+                font-size: .8rem;
+            }
+        }
+        h5 {
+            font-weight: 500;
+            font-size: .9rem;
+            line-height: 120%;
+            
+            @include mobile {
+                font-size: .8rem;
+            }
+        }
+        h6 {
+            font-weight: 500;
+            font-size: .8rem;
+            line-height: 120%;
+        }
+        p, a, span, li {
+            font-weight: 400;
+            font-size: .8rem;
+            line-height: 120%;
+            
+            @include mobile {
+                font-size: .7rem;
+            }
+        }
+        ul {
+            padding: 1rem 0;
+            
+            li {
+                list-style-type: disc;
+                list-style-position: inside;
+            }
+        }
+        ol {
+            padding: 1rem 0;
+            list-style: decimal;
+            list-style-position: inside;
+
+        }
+    }
+}
