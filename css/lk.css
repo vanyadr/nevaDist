@@ -8,6 +8,11 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
   background: #fff;
   padding: 1.5rem;
 }
+@media (max-width: 768px) {
+  .lk-menu__holder {
+    padding: 1.5rem 0.5rem;
+  }
+}
 .lk-menu__title {
   margin-bottom: 3rem;
 }
@@ -15,6 +20,17 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.2rem;
+}
+@media (max-width: 1024px) {
+  .lk-menu__sections {
+    gap: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .lk-menu__sections {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
 }
 .lk-menu__item {
   border: 1px solid #a98568;
@@ -24,6 +40,19 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
   gap: 3rem;
   padding: 1.2rem 1.2rem 0.8rem 1.5rem;
 }
+@media (max-width: 1024px) {
+  .lk-menu__item {
+    padding: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .lk-menu__item {
+    padding: 0.5rem;
+    aspect-ratio: 1/1;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
 .lk-menu__icon {
   width: 3.5rem;
   height: 3.5rem;
@@ -31,6 +60,18 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
   border-radius: 10px;
   background: #f4f1f1;
   padding: 0.5rem;
+}
+@media (max-width: 1024px) {
+  .lk-menu__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .lk-menu__icon {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 .lk-menu__header {
   display: flex;
@@ -45,11 +86,31 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
   line-height: 120%;
   color: #3d3126;
 }
+@media (max-width: 1400px) {
+  .lk-menu__item-title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .lk-menu__item-title {
+    font-size: 0.8rem;
+  }
+}
 .lk-menu__item-subtitle {
   font-weight: 400;
   font-size: 0.8rem;
   line-height: 120%;
   color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 1024px) {
+  .lk-menu__item-subtitle {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 768px) {
+  .lk-menu__item-subtitle {
+    font-size: 0.5rem;
+  }
 }
 .lk-menu .likes-num {
   font-weight: inherit;
@@ -59,6 +120,11 @@ main p, main a, main span, main h1, main h2, main h3, main h4, main h5, main h6 
 }
 .lk-menu .item-info {
   grid-column: 1/-1;
+}
+@media (max-width: 768px) {
+  .lk-menu .item-info {
+    grid-column: auto;
+  }
 }
 
 /*# sourceMappingURL=lk.css.map */

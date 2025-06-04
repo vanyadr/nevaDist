@@ -64,6 +64,7 @@ main {
         @include tablet {
         }
         @include mobile {
+            padding: 1.5rem .5rem;
         }
     }
     // .lk-menu__title
@@ -75,6 +76,18 @@ main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.2rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            gap: .8rem;
+        }
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.2rem;
+        }
     }
     // .lk-menu__item
     &__item {
@@ -84,6 +97,20 @@ main {
         flex-direction: column;
         gap: 3rem;
         padding: 1.2rem 1.2rem .8rem 1.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            padding: .8rem;
+        }
+        @include mobile {
+            padding: 0.5rem;
+            aspect-ratio: 1 / 1;
+            justify-content: space-between;
+            gap: 0;
+        }
     }
     // .lk-menu__icon
     &__icon {
@@ -93,6 +120,19 @@ main {
         border-radius: 10px;
         background: #f4f1f1;
         padding: 0.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        @include mobile {
+            width: 2rem;
+            height: 2rem;
+        }
     }
     // .lk-menu__item-title
     &__header {
@@ -107,13 +147,35 @@ main {
         font-size: 1.2rem;
         line-height: 120%;
         color: #3d3126;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1rem;
+        }
+        @include tablet {
+            font-size: .8rem;
+        }
+        @include mobile {
+        }
     }
     // .lk-menu__item-subtitle
     &__item-subtitle {
         font-weight: 400;
         font-size: .8rem;
         line-height: 120%;
-        color: rgba(0, 0, 0, 0.5)
+        color: rgba(0, 0, 0, 0.5);
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            font-size: .7rem;
+        }
+        @include mobile {
+            font-size: .5rem;
+        }
     }
     .likes-num {
         font-weight: inherit;
@@ -123,5 +185,15 @@ main {
     }
     .item-info {
         grid-column: 1 / -1;
+
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            grid-column: auto;
+        }
     }
 }
