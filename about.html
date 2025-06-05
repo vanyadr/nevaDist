@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neva Distillery</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <script type="module" src="js/script-about.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="overlay"></div>
+        <header class="header">
+            <section class="header__holder container grid">
+                <div class="header__logo">
+                    <a href="#">
+                        <picture>
+                            <img src="images/logo.png" alt="Логотип">
+                        </picture>
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            Пивоварение
+                        </li>
+                        <li class="menu__item">
+                            Самогоноварение
+                        </li>
+                        <li class="menu__item">
+                            Другое
+                        </li>
+                        <li class="menu__item menu__item--no-arrow">
+                            О нас
+                        </li>
+                        <li class="menu__item menu__item--no-arrow">
+                            Поддержка
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__search">
+                    <div class="header__search-inp-holder">
+                        <input type="text" class="header__search-inp" placeholder="Поиск">
+                    </div>
+                    <a href="#">
+                        <img src="images/account-icon.svg" alt="Профиль">
+                    </a>
+                    <a href="#">
+                        <img src="images/liked-icon.svg" alt="Избранное">
+                    </a>
+                    <a href="#">
+                        <img src="images/cart-icon.svg" alt="Корзина">
+                    </a>
+                </div>
+            </section>
+            <section class="header__drop-down-menu">
+                <div class="header__ddm-item container">
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Пивоварни</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Невская Винокурня</a></li>
+                            <li class="header__category-item"><a href="#">Speidel</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Аксессуары</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Насосы</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Сырье</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Солод</a></li>
+                            <li class="header__category-item"><a href="#">Хмель</a></li>
+                            <li class="header__category-item"><a href="#">Дрожжи</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Системы охлаждения</a></h5>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">ЦКТ</a></h5>
+                    </div>
+                </div>
+                <div class="header__ddm-item container">
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Конструктор</a></h5>
+                        <ul class="header__category-list header__category-list--2-cols">
+                            <li class="header__category-item"><a href="#">Дефлегматоры, холодильники</a></li>
+                            <li class="header__category-item"><a href="#">Трубы, патрубки и крепления</a></li>
+                            <li class="header__category-item"><a href="#">Диоптры и смотровые стекла</a></li>
+                            <li class="header__category-item"><a href="#">ТЭНы и элементы управления</a></li>
+                            <li class="header__category-item"><a href="#">Краны, заглушки</a></li>
+                            <li class="header__category-item"><a href="#">Узлы отбора</a></li>
+                            <li class="header__category-item"><a href="#">Переходники</a></li>
+                            <li class="header__category-item"><a href="#">Переходники</a></li>
+                            <li class="header__category-item"><a href="#">Сантехкомплект</a></li>
+                            <li class="header__category-item"><a href="#">Этажи флейт</a></li>
+                            <li class="header__category-item"><a href="#">Тарелочки, пыжи, СПН, РПН</a></li>
+                            <li class="header__category-item"><a href="#">Тройники</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Самогонные аппараты</a></h5>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Самогонные аппараты</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Пароводяные котлы</a></li>
+                            <li class="header__category-item"><a href="#">Флейты, колонны, аламбики</a></li>
+                            <li class="header__category-item"><a href="#">Баки</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__ddm-item container">
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Виноделие</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Гидропрессы</a></li>
+                            <li class="header__category-item"><a href="#">Измельчители</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Ингредиенты</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Декстроза</a></li>
+                            <li class="header__category-item"><a href="#">Дрожжи</a></li>
+                            <li class="header__category-item"><a href="#">Хмель</a></li>
+                            <li class="header__category-item"><a href="#">Солод</a></li>
+                            <li class="header__category-item"><a href="#">Уголь активированный</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Тара, бочки</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Дубовые бочки</a></li>
+                            <li class="header__category-item"><a href="#">Нержавеющие емкости</a></li>
+                            <li class="header__category-item"><a href="#">Пластиковые емкости</a></li>
+                            <li class="header__category-item"><a href="#">ПЭТ тара</a></li>
+                            <li class="header__category-item"><a href="#">Стеклянная тара</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Доп. оборудование</a></h5>
+                        <ul class="header__category-list">
+                            <li class="header__category-item"><a href="#">Моющие средства</a></li>
+                            <li class="header__category-item"><a href="#">Для самогоноварения</a></li>
+                            <li class="header__category-item"><a href="#">Силиконовые трубки</a></li>
+                            <li class="header__category-item"><a href="#">Термометры, монометры</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__category">
+                        <h5 class="header__category-name"><a href="#">Экскурсии</a></h5>
+                    </div>
+                </div>
+            </section>
+            <section class="header__holder--mobile container grid">
+                <div class="header__burder--mobile">
+                    <button class="header__burger-btn--mobile">
+                        <picture>
+                            <img src="images/burger.svg" alt="Логотип">
+                        </picture>
+                    </button>
+                </div>
+                <div class="header__logo">
+                    <a href="#">
+                        <picture>
+                            <img src="images/logo.png" alt="Логотип">
+                        </picture>
+                    </a>
+                </div>
+                <div class="header__search">
+                    <div class="header__search-inp-holder">
+                        <input type="text" class="header__search-inp" placeholder="Поиск">
+                    </div>
+                    <a href="#">
+                        <img src="images/account-icon.svg" alt="Профиль">
+                    </a>
+                    <a href="#">
+                        <img src="images/liked-icon.svg" alt="Избранное">
+                    </a>
+                    <a href="#">
+                        <img src="images/cart-icon.svg" alt="Корзина">
+                    </a>
+                </div>             
+            </section>
+            <section class="header__mobile-menu">
+                <div class="mobile-menu__holder container">
+                    <div class="mobile-menu__closer-holder">
+                        <button class="mobile-menu__closer">
+                            <img src="images/closer.svg" alt="Закрыть">
+                        </button>
+                    </div>
+                    <ul class="accordion__holder accrodion-holder">
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">Пивоварение</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Пивоварни</a></h5>
+                                    <ul class="header__category-list">
+                                        <li class="header__category-item"><a href="#">Невская Винокурня</a></li>
+                                        <li class="header__category-item"><a href="#">Speidel</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Аксессуары</a></h5>
+                                    <ul class="header__category-list">
+                                        <li class="header__category-item"><a href="#">Насосы</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Сырье</a></h5>
+                                    <ul class="header__category-list">
+                                        <li class="header__category-item"><a href="#">Солод</a></li>
+                                        <li class="header__category-item"><a href="#">Хмель</a></li>
+                                        <li class="header__category-item"><a href="#">Дрожжи</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Системы охлаждения</a></h5>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">ЦКТ</a></h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">Самогоноварение</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Конструктор</a></h5>
+                                    <ul class="header__category-list header__category-list--2-cols">
+                                        <li class="header__category-item"><a href="#">Дефлегматоры, холодильники</a></li>
+                                        <li class="header__category-item"><a href="#">Трубы, патрубки и крепления</a></li>
+                                        <li class="header__category-item"><a href="#">Диоптры и смотровые стекла</a></li>
+                                        <li class="header__category-item"><a href="#">ТЭНы и элементы управления</a></li>
+                                        <li class="header__category-item"><a href="#">Краны, заглушки</a></li>
+                                        <li class="header__category-item"><a href="#">Узлы отбора</a></li>
+                                        <li class="header__category-item"><a href="#">Переходники</a></li>
+                                        <li class="header__category-item"><a href="#">Переходники</a></li>
+                                        <li class="header__category-item"><a href="#">Сантехкомплект</a></li>
+                                        <li class="header__category-item"><a href="#">Этажи флейт</a></li>
+                                        <li class="header__category-item"><a href="#">Тарелочки, пыжи, СПН, РПН</a></li>
+                                        <li class="header__category-item"><a href="#">Тройники</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Самогонные аппараты</a></h5>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Самогонные аппараты</a></h5>
+                                    <ul class="header__category-list">
+                                        <li class="header__category-item"><a href="#">Пароводяные котлы</a></li>
+                                        <li class="header__category-item"><a href="#">Флейты, колонны, аламбики</a></li>
+                                        <li class="header__category-item"><a href="#">Баки</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accrodion-item">
+                            <button class="accordion-header">
+                                <p class="accordion-title">Другое</p>
+                                <div  class="accordion-bullet"><img src="images/openDropDown-arrow.svg" alt=""></div>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Виноделие</a></h5>
+                                    <ul class="header__category-list">
+                                        <li class="header__category-item"><a href="#">Гидропрессы</a></li>
+                                        <li class="header__category-item"><a href="#">Измельчители</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Ингредиенты</a></h5>
+                                    <ul class="header__category-list">
+                                        <li class="header__category-item"><a href="#">Декстроза</a></li>
+                                        <li class="header__category-item"><a href="#">Дрожжи</a></li>
+                                        <li class="header__category-item"><a href="#">Хмель</a></li>
+                                        <li class="header__category-item"><a href="#">Солод</a></li>
+                                        <li class="header__category-item"><a href="#">Уголь активированный</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Тара, бочки</a></h5>
+                                    <ul class="header__category-list">
+                                        <li class="header__category-item"><a href="#">Дубовые бочки</a></li>
+                                        <li class="header__category-item"><a href="#">Нержавеющие емкости</a></li>
+                                        <li class="header__category-item"><a href="#">Пластиковые емкости</a></li>
+                                        <li class="header__category-item"><a href="#">ПЭТ тара</a></li>
+                                        <li class="header__category-item"><a href="#">Стеклянная тара</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Доп. оборудование</a></h5>
+                                    <ul class="header__category-list">
+                                        <li class="header__category-item"><a href="#">Моющие средства</a></li>
+                                        <li class="header__category-item"><a href="#">Для самогоноварения</a></li>
+                                        <li class="header__category-item"><a href="#">Силиконовые трубки</a></li>
+                                        <li class="header__category-item"><a href="#">Термометры, монометры</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header__category">
+                                    <h5 class="header__category-name"><a href="#">Экскурсии</a></h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="accordion-item--no-open">
+                            <a href="#">О нас</a>
+                        </li>
+                        <li class="accordion-item--no-open">
+                            <a href="#">Поддержка</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+        <main class="main container">
+            <section class="search">
+                <div class="search__search-inp-holder">
+                    <input type="text" class="search__search-inp" placeholder="Поиск">
+                </div>
+            </section>
+            <section class="hero grid">
+                <div class="hero__img">
+                    <picture>
+                        <img src="images/raznie-razmeri-bochek.webp" alt="">
+                    </picture>
+                </div>
+                <div class="hero__info">
+                    <a href="#" class="hero__play">
+                        <img class="hero__circle" src="images/excursions-circle.svg" alt="">
+                        <img class="hero__link" src="images/link-arrow-brown.svg" alt="">
+                    </a>
+                    <p class="hero__text">Наша страна во все времена славилась богатым разнообразием самобытных традиций. В их числе не малое количество посвящено созданию и употреблению как крепких, так и слабоалкогольных напитков.</p>
+                </div>
+            </section>
+            <section class="mission grid">
+                <h1 class="about__title mission__title">Наша миссия</h1>
+                <p class="about__highlighted-text mission__text">К ним относятся и полугар, и <span class="about__highlight">хмельной мед</span>, и множество другого не менее <span class="about__highlight">экзотичного</span>, в наше время, алкоголя.</p>
+            </section>
+            <section class="features grid">
+                <h2 class="features__title about__title">Для производства оборудования мы используем:</h2>
+                <ul class="features__list">
+                    <li class="features__item">
+                        <span class="features__num">1</span>
+                        <p class="features__text">Производственный цех с оборудованием последнего поколения</p>
+                    </li>
+                    <li class="features__item">
+                        <span class="features__num">2</span>
+                        <p class="features__text">Отечественная и зарубежная база поставщиков</p>
+                    </li>
+                    <li class="features__item">
+                        <span class="features__num">3</span>
+                        <p class="features__text">Производственный цех с оборудованием последнего поколения</p>
+                    </li>
+                    <li class="features__item">
+                        <span class="features__num">4</span>
+                        <p class="features__text">Производственный цех с оборудованием последнего поколения</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="service container">
+                <div class="service__header">
+                    <button class="service__btn border-btn">Записаться на экскурсию</button>
+                    <h2 class="service__title h2">Как происходит создание оборудования?</h2>
+                </div>
+                <div class="service__blocks grid">
+                    <div class="service__block service__block--1">
+                        <h5 class="service__name h5">Создание образца</h5>
+                        <div class="service__repair">
+                            <div class="service__repair-item">
+                                <span class="service__repair-num">01</span>
+                                <a href="" class="service__repair-name">Разработка технической модели</a>
+                            </div>
+                            <div class="service__repair-item">
+                                <span class="service__repair-num">02</span>
+                                <a href="" class="service__repair-name">Создание экспериментального образца</a>
+                            </div>
+                            <div class="service__repair-item">
+                                <span class="service__repair-num">03</span>
+                                <a href="" class="service__repair-name">Тестирование модели</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service__block service__block--2">
+                        <p class="service__catalog">Утверждение финального образца</p>
+                    </div>
+                    <div class="service__block service__block--3">
+                        <p class="service__catalog--small">Получение патентов</p>
+                    </div>
+                    <div class="service__block service__block--4">
+                        <p class="service__catalog--small">Запуск серийного производства</p>
+                    </div>
+                </div>
+            </section>
+            <section class="text-block grid">
+                <p class="text-block__text">Наша страна во все времена славилась богатым разнообразием самобытных традиций. В их числе не малое количество посвящено созданию и употреблению как крепких, так и слабоалкогольных напитков. К ним относятся и полугар, и хмельной мед, и множество другого разнообразного и не менее экзотичного, в наше время, алкоголя. К великому сожалению, в наши дни эти традиции были утеряны.</p>
+                <div class="text-block__img">
+                    <picture>
+                        <img src="images/kollazh-oborudovaniya.png" alt="">
+                    </picture>
+                </div>
+            </section>
+            <section class="faq">
+                <ul class="faq__list accrodion-holder">
+                    <li class="accrodion-item faq__item">
+                        <button class="accordion-header">
+                            <p class="accordion-title faq__title">Как оформить доставку?</p>
+                            <div  class="accordion-bullet"><img src="images/accrodion-arrow-brown.svg" alt=""></div>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="faq__text">Наша страна во все времена славилась богатым разнообразием самобытных традиций. В их числе не малое количество посвящено созданию и употреблению как крепких, так и слабоалкогольных напитков.</p>
+                        </div>
+                    </li>
+                    <li class="accrodion-item faq__item">
+                        <button class="accordion-header">
+                            <p class="accordion-title faq__title">Как понять, какой размер бочки подойдет?</p>
+                            <div  class="accordion-bullet"><img src="images/accrodion-arrow-brown.svg" alt=""></div>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="faq__text">Наша страна во все времена славилась богатым разнообразием самобытных традиций. В их числе не малое количество посвящено созданию и употреблению как крепких, так и слабоалкогольных напитков.</p>
+                        </div>
+                    </li>
+                    <li class="accrodion-item faq__item">
+                        <button class="accordion-header">
+                            <p class="accordion-title faq__title">Как оформить доставку?</p>
+                            <div  class="accordion-bullet"><img src="images/accrodion-arrow-brown.svg" alt=""></div>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="faq__text">Наша страна во все времена славилась богатым разнообразием самобытных традиций. В их числе не малое количество посвящено созданию и употреблению как крепких, так и слабоалкогольных напитков.</p>
+                        </div>
+                    </li>
+                    <li class="accrodion-item faq__item">
+                        <button class="accordion-header">
+                            <p class="accordion-title faq__title">Как понять, какой размер бочки подойдет?</p>
+                            <div  class="accordion-bullet"><img src="images/accrodion-arrow-brown.svg" alt=""></div>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="faq__text">Наша страна во все времена славилась богатым разнообразием самобытных традиций. В их числе не малое количество посвящено созданию и употреблению как крепких, так и слабоалкогольных напитков.</p>
+                        </div>
+                    </li>
+                    <li class="accrodion-item faq__item">
+                        <button class="accordion-header">
+                            <p class="accordion-title faq__title">Как оформить доставку?</p>
+                            <div  class="accordion-bullet"><img src="images/accrodion-arrow-brown.svg" alt=""></div>
+                        </button>
+                        <div class="accordion-content">
+                            <p class="faq__text">Наша страна во все времена славилась богатым разнообразием самобытных традиций. В их числе не малое количество посвящено созданию и употреблению как крепких, так и слабоалкогольных напитков.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="contacts grid">
+                <div class="contacts__form">
+                    <p class="contacts__text about__highlighted-text">свяжитесь с нами, чтобы обсудить <span class="about__highlight">все ваши вопросы</span></p>
+                    <form action="" class="contacts__form-holder footer__form">
+                        <input type="text" name="" id="" class="footer__form-name" placeholder="Имя">
+                        <input type="tel" name="" id="" class="footer__form-tel" placeholder="Номер телефона">
+                        <button class="footer__form-btn border-btn" type="submit">Оставить заявку</button>
+                    </form>
+                </div>
+                <div class="contacts__info">
+                    <h2 class="contacts__title about__title-small">Контакты</h2>
+                    <a href="#" class="contacts__tel">8 (800) 250-65-28</a>
+                    <ul class="socials">
+                        <li class="socials-item">
+                            <a href="#">
+                                <img src="images/tg-social-brown.svg" alt="Иконка">
+                            </a>
+                        </li>
+                        <li class="socials-item">
+                            <a href="#">
+                                <img src="images/ig-social-brown.svg" alt="Иконка">
+                            </a>
+                        </li>
+                        <li class="socials-item">
+                            <a href="#">
+                                <img src="images/vk-social-brown.svg" alt="Иконка">
+                            </a>
+                        </li>
+                        <li class="socials-item">
+                            <a href="#">
+                                <img src="images/mail-social-brown.svg" alt="Иконка">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="address grid">
+                <div class="address__info">
+                    <div class="address__info-block">
+                        <h2 class="about__title-small address__title">Оффлайн-магазин</h2>
+                        <a class="address__text">Санкт-Петербург, ул. Комсомола, дом 1/3</a>
+                    </div>
+                    <div class="address__info-block">
+                        <p class="about__title-small address__title">Часы работы</p>
+                        <time datetime="" class="address__text">ПН-ПТ с 10:00 до 19:00</time>
+                    </div>
+                </div>
+                <div class="address__map">
+                    <div style="position:relative;overflow:hidden;width:100%;height:100%;"><iframe src="https://yandex.ru/map-widget/v1/?ll=30.374000%2C59.957601&mode=search&oid=1777959670&ol=biz&sctx=ZAAAAAgBEAAaKAoSCY9WtaSjUD5AEQgB%2BRIq%2BE1AEhIJmQ0yychZ9T8RD9WUZB2O4z8iBgABAgMEBSgKOABAAkgBagJydZ0BzczMPaABAKgBAL0BMJmnR8IBBfaF5s8GggIh0L3QtdCy0YHQutCw0Y8g0LLQuNC90L7QutGD0YDQvdGPigIAkgIAmgIMZGVza3RvcC1tYXBzqgKEATI3MDM3NjA5MjQ2LDE0NzQxMDU4NTg3NywxMDQyNzU5Mjk0NzUsNDAwMDQzODQ4MSwxNzI1MTg5Njg4Miw3NTE0NzI5MTkzMiwzOTM2MDgwNDc0LDIxNDcxMDk5NjM2OCwyMDYzMDE1NzA4MzMsNzQ0MDc4NTU5NTYsMzc0Njg0NzI5OLACAQ%3D%3D&sll=30.374000%2C59.957601&source=serp_navig&sspn=0.067128%2C0.019020&text=%D0%BD%D0%B5%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B2%D0%B8%D0%BD%D0%BE%D0%BA%D1%83%D1%80%D0%BD%D1%8F&z=14.84" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                </div>
+            </section>
+            <section class="projects">
+                <div class="projects__title-holder">
+                    <h2 class="projects__title">Наши проекты</h2>
+                </div>
+                <a href="#" class="projects__item">
+                    <div class="projects__img">
+                        <picture>
+                            <img src="images/plague-brew-logo-brown.svg" alt="">
+                        </picture>
+                    </div>
+                    <p class="projects__descriptor">чумная пивоварня</p>
+                </a>
+                <a href="#" class="projects__item">
+                    <div class="projects__img">
+                        <picture>
+                            <img src="images/plague-brew-logo-brown.svg" alt="">
+                        </picture>
+                    </div>
+                    <p class="projects__descriptor">чумная пивоварня</p>
+                </a>
+                <a href="#" class="projects__item">
+                    <div class="projects__img">
+                        <picture>
+                            <img src="images/plague-brew-logo-brown.svg" alt="">
+                        </picture>
+                    </div>
+                    <p class="projects__descriptor">чумная пивоварня</p>
+                </a>
+                <a href="#" class="projects__item">
+                    <div class="projects__img">
+                        <picture>
+                            <img src="images/plague-brew-logo-brown.svg" alt="">
+                        </picture>
+                    </div>
+                    <p class="projects__descriptor">чумная пивоварня</p>
+                </a>
+                <a href="#" class="projects__item">
+                    <div class="projects__img">
+                        <picture>
+                            <img src="images/plague-brew-logo-brown.svg" alt="">
+                        </picture>
+                    </div>
+                    <p class="projects__descriptor">чумная пивоварня</p>
+                </a>
+                <a href="#" class="projects__item">
+                    <div class="projects__img">
+                        <picture>
+                            <img src="images/plague-brew-logo-brown.svg" alt="">
+                        </picture>
+                    </div>
+                    <p class="projects__descriptor">чумная пивоварня</p>
+                </a>
+                <a href="#" class="projects__item">
+                    <div class="projects__img">
+                        <picture>
+                            <img src="images/plague-brew-logo-brown.svg" alt="">
+                        </picture>
+                    </div>
+                    <p class="projects__descriptor">чумная пивоварня</p>
+                </a>
+                <a href="#" class="projects__item">
+                    <div class="projects__img">
+                        <picture>
+                            <img src="images/plague-brew-logo-brown.svg" alt="">
+                        </picture>
+                    </div>
+                    <p class="projects__descriptor">чумная пивоварня</p>
+                </a>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__top container">
+                <ul class="footer__address">
+                    <li class="footer__address-item">
+                        <a class="footer__address-link" href="#">
+                            <img src="images/map-icon.svg" alt="На карте">
+                            <span>Санкт-Петербург ул. Комсомола, дом 1/3</span>
+                        </a>
+                    </li>
+                    <li class="footer__address-item">Часы работы: ПН-ПТ с 10:00 до 19:00</li>
+                    <li class="footer__address-item">
+                        <a href="tel:88002506528">8 (800) 250-65-28</a>
+                    </li>
+                    <li class="footer__address-item">
+                        <ul class="socials">
+                            <li class="socials-item">
+                                <a href="#">
+                                    <img src="images/tg-social.svg" alt="Иконка">
+                                </a>
+                            </li>
+                            <li class="socials-item">
+                                <a href="#">
+                                    <img src="images/ig-social.svg" alt="Иконка">
+                                </a>
+                            </li>
+                            <li class="socials-item">
+                                <a href="#">
+                                    <img src="images/phone-social.svg" alt="Иконка">
+                                </a>
+                            </li>
+                            <li class="socials-item">
+                                <a href="#">
+                                    <img src="images/vk-social.svg" alt="Иконка">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="footer__info">
+                    <li class="footer__info-item"><a href="#">Пивоварение</a></li>
+                    <li class="footer__info-item"><a href="#">Самогоноварение</a></li>
+                    <li class="footer__info-item"><a href="#">Другое</a></li>
+                </ul>
+                <ul class="footer__lk">
+                    <li class="footer__lk-item"><a href="#">Личный кабинет</a></li>
+                    <li class="footer__lk-item"><a href="#">FAQ</a></li>
+                    <li class="footer__lk-item"><a href="#">Блог</a></li>
+                </ul>
+                <ul class="footer__about">
+                    <li class="footer__about-item"><a href="#">О компании</a></li>
+                    <li class="footer__about-item"><a href="#">Отзывы</a></li>
+                    <li class="footer__about-item"><a href="#">Экскурсия</a></li>
+                    <li class="footer__about-item"><a href="#">Политика конфиденциальности</a></li>
+                    <li class="footer__about-item"><a href="#">Оферта</a></li>
+                </ul>
+            </div>
+            <div class="footer__top--mobile container grid">
+                <ul class="footer__address grid">
+                    <li class="footer__address-item">
+                        <a class="footer__address-link" href="#">
+                            <img src="images/map-icon.svg" alt="На карте">
+                            <span>Санкт-Петербург ул. Комсомола, дом 1/3</span>
+                        </a>
+                    </li>
+                    <li class="footer__address-item">
+                        <a href="tel:88002506528">8 (800) 250-65-28</a>
+                    </li>
+                    <li class="footer__address-item">Часы работы: ПН-ПТ с 10:00 до 19:00</li>
+                    <li class="footer__address-item">
+                        <ul class="socials">
+                            <li class="socials-item">
+                                <a href="#">
+                                    <img src="images/tg-social.svg" alt="Иконка">
+                                </a>
+                            </li>
+                            <li class="socials-item">
+                                <a href="#">
+                                    <img src="images/ig-social.svg" alt="Иконка">
+                                </a>
+                            </li>
+                            <li class="socials-item">
+                                <a href="#">
+                                    <img src="images/phone-social.svg" alt="Иконка">
+                                </a>
+                            </li>
+                            <li class="socials-item">
+                                <a href="#">
+                                    <img src="images/vk-social.svg" alt="Иконка">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="footer__info">
+                    <li class="footer__info-item"><a href="#">Пивоварение</a></li>
+                    <li class="footer__info-item"><a href="#">Самогоноварение</a></li>
+                    <li class="footer__info-item"><a href="#">Другое</a></li>
+                </ul>
+                <ul class="footer__lk">
+                    <li class="footer__lk-item"><a href="#">Личный кабинет</a></li>
+                    <li class="footer__lk-item"><a href="#">FAQ</a></li>
+                    <li class="footer__lk-item"><a href="#">Блог</a></li>
+                </ul>
+                <ul class="footer__about">
+                    <li class="footer__about-item"><a href="#">О компании</a></li>
+                    <li class="footer__about-item"><a href="#">Отзывы</a></li>
+                    <li class="footer__about-item"><a href="#">Экскурсия</a></li>
+                    <li class="footer__about-item"><a href="#">Политика конфиденциальности</a></li>
+                    <li class="footer__about-item"><a href="#">Оферта</a></li>
+                </ul>
+            </div>
+            <div class="footer__bottom container grid">
+                <div class="footer__form-holder">
+                    <p class="footer__form-title">Заполните форму для получения персональной скидки</p>
+                    <form action="" class="footer__form">
+                        <input type="text" name="" id="" class="footer__form-name" placeholder="Имя">
+                        <input type="tel" name="" id="" class="footer__form-tel" placeholder="Номер телефона">
+                        <button class="footer__form-btn border-btn" type="submit">Оставить заявку</button>
+                    </form>
+                </div>
+                <p class="footer__text">Наша страна во все времена славилась богатым разнообразием самобытных традиций. В их числе не малое количество посвящено созданию и употреблению как крепких, так и слабоалкогольных напитков. </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

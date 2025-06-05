@@ -464,6 +464,7 @@ img {
   color: #776e65;
   background: #fffcf9;
   border-radius: 5px;
+  padding-right: 2rem;
 }
 @media (max-width: 1800px) {
   .header__search-inp {

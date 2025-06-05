@@ -58,3 +58,23 @@
        url("../fonts/Inter-SemiBold.eot") format('eot');
   font-display: swap;
 }
+@font-face {
+  font-family: Inter;
+  font-weight: 800;
+  font-style: normal;
+  src: local("Inter"),
+       url("../fonts/Inter-ExtraBold.woff2") format('woff2'),
+       url("../fonts/Inter-ExtraBold.woff") format('woff'),
+       url("../fonts/Inter-ExtraBold.eot") format('eot');
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  font-weight: 900;
+  font-style: normal;
+  src: local("Inter"),
+       url("../fonts/Inter-Black.woff2") format('woff2'),
+       url("../fonts/Inter-Black.woff") format('woff'),
+       url("../fonts/Inter-Black.eot") format('eot');
+  font-display: swap;
+}
