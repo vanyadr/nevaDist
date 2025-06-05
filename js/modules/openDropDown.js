@@ -22,28 +22,20 @@ export const openDropDown = function () {
                     btn.dataset.menu = counter;
                     counter++;
 
-                    btn.addEventListener("click",
+                    btn.addEventListener('mouseover',
                         function () {
                             const correctItem = document.querySelector(`.header__ddm-item[data-menu="${this.dataset.menu}"]`);
                             if (menuHolderOpened) {
-                                if (correctItem.classList.contains('header__drop-down-menu--open')) {
-                                    menu.classList.toggle('header__drop-down-menu--open');
-                                    overlay.classList.toggle('active');
-                                    correctItem.classList.toggle('header__drop-down-menu--open');
-                                    this.classList.toggle('header__drop-down-menu--open');
-                                    menuHolderOpened = false;
-                                } else {
-                                    items.forEach(
-                                        (item) => {
-                                            if (item.classList.contains('header__drop-down-menu--open')) {
-                                                item.classList.toggle('header__drop-down-menu--open');
-                                                document.querySelector(`.menu__item[data-menu="${item.dataset.menu}"]`).classList.toggle('header__drop-down-menu--open');
-                                            }
+                                items.forEach(
+                                    (item) => {
+                                        if (item.classList.contains('header__drop-down-menu--open')) {
+                                            item.classList.toggle('header__drop-down-menu--open');
+                                            document.querySelector(`.menu__item[data-menu="${item.dataset.menu}"]`).classList.toggle('header__drop-down-menu--open');
                                         }
-                                    );
-                                    correctItem.classList.toggle('header__drop-down-menu--open');
-                                    this.classList.toggle('header__drop-down-menu--open');
-                                }
+                                    }
+                                );
+                                correctItem.classList.toggle('header__drop-down-menu--open');
+                                this.classList.toggle('header__drop-down-menu--open');
                             } else {
                                 menu.classList.toggle('header__drop-down-menu--open');
                                 correctItem.classList.toggle('header__drop-down-menu--open');
@@ -57,7 +49,7 @@ export const openDropDown = function () {
             }
         );
 
-        overlay.addEventListener('click', () => {
+        overlay.addEventListener('mouseover', () => {
             items.forEach(
                 (item) => {
                     if (item.classList.contains('header__drop-down-menu--open')) {
