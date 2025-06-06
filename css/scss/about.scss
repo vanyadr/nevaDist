@@ -41,7 +41,7 @@
         margin-bottom: 4.5rem;
     }
     @include mobile {
-        margin-bottom: 1.5rem;
+        margin-bottom: 5rem;
     }
 }
 main {
@@ -98,6 +98,7 @@ main {
 }
 .hero {
     @include blockGap();
+    row-gap: 1.5rem;
     // .hero__img
     &__img {
         grid-column: 1 / 6;
@@ -105,6 +106,20 @@ main {
         border: 1px solid #a98568;
         border-radius: 20px;
         overflow: hidden;
+        
+        @include pc {
+            height: 19rem;
+        }
+        @include laptop {
+            height: 13rem;
+        }
+        @include tablet {
+            grid-column: 1 / 5;
+        }
+        @include mobile {
+            height: 11rem;
+            grid-column: 1 / -1;
+        }
 
         img {
             object-fit: cover;
@@ -112,12 +127,24 @@ main {
     }
     // .hero__info
     &__info {
-         grid-column: 8 / 12;
-         height: 100%;
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         gap: 2rem;
+        grid-column: 8 / 12;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            grid-column: 6 / -1;
+        }
+        @include mobile {
+            gap: 1.5rem;
+            grid-column: 1 / -1;
+        }
     }
     // .hero__play
     &__play {
@@ -126,6 +153,25 @@ main {
         position: relative;
         margin-left: 14rem;
         margin-top: 2rem;
+        
+        @include pc {
+            height: 5rem;
+            width: 5rem;
+            margin-left: 11rem;
+        }
+        @include laptop {
+            height: 3.5rem;
+            width: 3.5rem;
+            margin-left: 7.5rem;
+            margin-top: 1rem;
+        }
+        @include tablet {
+            margin-left: 4rem;
+            margin-top: 0;
+        }
+        @include mobile {
+            margin-left: 7.5rem;
+        }
     }
     // .hero__text
     &__circle {
@@ -141,6 +187,19 @@ main {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        
+        @include pc {
+            width: 1rem;
+            height: 1rem;
+        }
+        @include laptop {
+            width: .8rem;
+            height: .8rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     @keyframes rotate-circle {
         to {
@@ -150,13 +209,35 @@ main {
 }
 .mission {
     @include blockGap();
+    row-gap: 1.2rem;
     // .mission__title
     &__title {
         grid-column: 1 / 4;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+        }
     }
     // .mission__text
     &__text {
         grid-column: 5 / 12;
+        
+        @include pc {
+        }
+        @include laptop {
+            grid-column: 4 / -1;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+        }
     }
 }
 .about {
@@ -165,6 +246,16 @@ main {
         font-family: Inter, Serif;
         font-weight: 400;
         font-size: 1rem;
+        
+        @include pc {
+            font-size: .8rem;
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     &__title-small {
         font-family: Inter, Serif;
@@ -178,6 +269,18 @@ main {
         font-size: 2rem;
         line-height: 140%;
         text-transform: uppercase;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1.4rem;
+        }
+        @include tablet {
+            font-size: 1.1rem;
+        }
+        @include mobile {
+            font-size: .9rem;
+        }
     }
     // .about__highlight
     &__highlight {
@@ -186,9 +289,21 @@ main {
 }
 .features {
     @include blockGap();
+    row-gap: 1.2rem;
     // .features__title
     &__title {
         grid-column: 1 / 4;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            grid-column: 1 / 3;
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+        }
     }
     // .features__list
     &__list {
@@ -196,6 +311,18 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0.4rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+            grid-column: 4 / -1;
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+            gap: 0.2rem;
+        }
     }
     // .features__item
     &__item {
@@ -204,6 +331,19 @@ main {
         padding: 0 1.2rem 1.2rem;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        
+        @include pc {
+            padding: 0 .8rem .8rem;
+        }
+        @include laptop {
+        }
+        @include tablet {
+            padding: 0 .5rem .8rem;
+        }
+        @include mobile {
+            padding: 0 .4rem .4rem;
+        }
     }
     // .features__num
     &__num {
@@ -211,12 +351,38 @@ main {
         font-size: 9rem;
         line-height: 1.2;
         color: rgba(#3d3126, .1);
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 7rem;
+        }
+        @include tablet {
+            font-size: 5rem;
+        }
+        @include mobile {
+        }
     }
     // .features__text
     &__text {
         text-align: right;
         padding-left: 1rem;
         margin-top: -0.5rem;
+        line-height: 1.2;
+
+        @include pc {
+            margin: 0;
+            font-size: 1rem;
+            padding: 0;
+        }
+        @include laptop {
+            font-size: .8rem;
+        }
+        @include tablet {
+            font-size: .6rem;
+        }
+        @include mobile {
+        }
     }
 }
 .service {
@@ -236,7 +402,9 @@ main {
             margin-bottom: 1.2rem;
         }
         @include mobile {
-            margin-bottom: .8rem;
+            margin-bottom: 1.2rem;
+            flex-direction: column-reverse;
+            gap: 1.2rem;
         }
     }
     // .service__btn
@@ -252,6 +420,7 @@ main {
         }
         @include tablet {
             display: flex;
+            gap: 0.4rem;
         }
         @include mobile {
             display: grid;
@@ -269,8 +438,10 @@ main {
         gap: 0.8rem;
 
         @include pc {
+            padding: 1.2rem .8rem;
         }
         @include laptop {
+            padding: 1.2rem .7rem;
         }
         @include tablet {
             flex-grow: 1;
@@ -291,8 +462,10 @@ main {
         @include laptop {
         }
         @include tablet {
+            gap: 4rem;
         }
         @include mobile {
+            gap: 3rem;
             grid-column: 1 / -1;
         }
     }
@@ -309,27 +482,35 @@ main {
         @include tablet {
         }
         @include mobile {
+            padding-top: 9rem;
             grid-column: 1 / -1;
         }
     }
     // .service__block--3
     &__block--3 {
-        grid-column: 9 / 11;
-        background: #f6f3f3;
-
+        grid-column: 9 / -1;
+        display: flex;
+        gap: 0.4rem;
+        height: 100%;
+        
         @include pc {
         }
         @include laptop {
+            flex-direction: column;
         }
         @include tablet {
+            height: auto;
+            flex-grow: 1;
+            flex-basis: 0;
         }
         @include mobile {
-            grid-column: 1 / 3;
+            grid-column: 1 / -1;
         }
     }
-    &__block--4 {
-        grid-column: 11 / -1;
+    &__block--small {
         background: #f6f3f3;
+        flex-basis: 0;
+        flex-grow: 1;
         justify-content: flex-end;
 
         @include pc {
@@ -339,8 +520,11 @@ main {
         @include tablet {
         }
         @include mobile {
-            grid-column: 3 / -1;
+            padding-top: 4rem;
         }
+    }
+    &__block--small:last-child {
+        padding-top: 3rem;
     }
     // .service__name
     &__name {
@@ -467,33 +651,118 @@ main {
         letter-spacing: -0.02em;
         color: #24170a;
         font-size: 1.2rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
 }
 .text-block {
     @include blockGap();
     align-items: center;
+    row-gap: 0.8rem;
     // .text-block__text
     &__text {
         grid-column: 1 / 6;
         padding: 0 4rem;
         line-height: 1.2;
+        
+        @include pc {
+            padding: 0 3rem;
+        }
+        @include laptop {
+            padding: 0 2rem;
+            grid-column: 1 / 7;
+        }
+        @include tablet {
+            grid-column: 1 / 4;
+            padding: 0;
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+        }
     }
     // .text-block__img
     &__img {
         grid-column: 6 / 12;
+        
+        @include pc {
+            grid-column: 6 / -1;
+            padding: 0 2rem;
+        }
+        @include laptop {
+            grid-column: 7 / -1;
+            padding: 0 2rem 0 0;
+        }
+        @include tablet {
+            grid-column: 5 / -1;
+            padding: 0;
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+            order: -1;
+        }
     }
 }
 .faq {
     @include blockGap();
     // .faq__list
+    &__title-main {
+        font-weight: 500;
+        font-size: 2.7rem;
+        line-height: 93%;
+        letter-spacing: -0.02em;
+        color: #2d2d2d;
+        margin-bottom: 3rem;
+        
+        @include pc {
+            font-size: 2.4rem;
+        }
+        @include laptop {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            font-size: 1.4rem;
+        }
+    }
     &__list {
         gap: 1rem;
+        
+        @include pc {
+            gap: .8rem;
+        }
+        @include laptop {
+            gap: .4rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .faq__item
     &__item {
         border-radius: 20px;
         background: rgba(169, 133, 104, 0.2);
         padding: 1.5rem;
+        
+        @include pc {
+        }
+        @include laptop {
+        }
+        @include tablet {
+        }
+        @include mobile {
+            padding: 1.6rem .6rem;
+        }
     }
     // .faq__title
     &__title {
@@ -501,19 +770,44 @@ main {
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 120%;
+        
+        @include pc {
+        }
+        @include laptop {
+            flex-basis: 96%;
+            font-size: .9rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            flex-basis: 90%;
+        }
     }
-    // .faq__text
-    &__text {}
-    .accrodion-holder {
-    }
-    .accrodion-item {
-    }
-    .accordion-header {
-    }
-    .accordion-title {
+    &__text {
+        @include pc {
+            font-size: 1rem;
+        }
+        @include laptop {
+            font-size: .7rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     .accordion-bullet {
         flex-basis: 2.5%;
+        
+        @include pc {
+        }
+        @include laptop {
+            flex-basis: 4%;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            flex-basis: 10%;
+        }
     }
     .accordion-content {
         margin-bottom: 0;
@@ -521,12 +815,32 @@ main {
 }
 .contacts {
     @include blockGap();
+    row-gap: 3rem;
     // .contacts__form
     &__form {
         grid-column: 1 / 8;
         margin-right: 3rem;
         padding-right: 3rem;
         border-right: 1px solid #3D3126;
+        
+        @include pc {
+            margin-right: 2.5rem;
+            padding-right: 2.5rem;
+        }
+        @include laptop {
+            grid-column: 1 / 9;
+        }
+        @include tablet {
+            grid-column: 1 / 7;
+            margin-right: 2rem;
+            padding-right: 1.2rem;
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
     }
     // .contacts__text
     &__text {
@@ -543,6 +857,9 @@ main {
             color: #fff;
         }
     }
+    .footer__form-btn {
+        padding: 0.75rem;
+    }
     // .contacts__info
     &__info {
         grid-column: 8 / -1;
@@ -551,19 +868,46 @@ main {
         justify-content: flex-end;
         height: 100%;
         gap: 1.2rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            gap: 1rem;
+            grid-column: 9 / -1;
+        }
+        @include tablet {
+            grid-column: 7 / -1;
+            margin-left: -0.8rem;
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+            margin: 0;
+        }
     }
-    // .contacts__title
-    &__title {}
     // .contacts__tel
     &__tel {
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 120%;
         color: #24170a;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
+    }
+    .socials {
+        height: 1.6rem;
     }
 }
 .address {
     @include blockGap();
+    row-gap: 1.5rem;
     // .address__info
     &__info {
         grid-column: 1 / 7;
@@ -572,6 +916,21 @@ main {
         height: 100%;
         justify-content: flex-end;
         gap: 3rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            gap: .5rem;
+            grid-column: 1 / 8;
+            justify-content: space-between;
+        }
+        @include tablet {
+            grid-column: 1 / 4;
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+            gap: 1.5rem;
+        }
     }
     // .address__address
     &__info-block {
@@ -585,6 +944,16 @@ main {
         font-size: 1.4rem;
         line-height: 120%;
         color: #24170a;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+        }
     }
     // .address__map
     &__map {
@@ -592,6 +961,20 @@ main {
         height: 19rem;
         overflow: hidden;
         border-radius: 20px;
+        
+        @include pc {
+            grid-column: 7 / -1;
+        }
+        @include laptop {
+            grid-column: 8 / -1;
+            height: 11rem;
+        }
+        @include tablet {
+            grid-column: 5 / -1;
+        }
+        @include mobile {
+            grid-column: 1 / -1;
+        }
 
         iframe {
             width: 100%;
@@ -603,16 +986,42 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.4rem;
+    
+    @include pc {
+    }
+    @include laptop {
+    }
+    @include tablet {
+    }
+    @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
     // .projects__title
     &__title-holder {
         @include centerItem();
         height: 100%;
+
+        @include mobile {
+            grid-column: 1 / -1;
+            justify-content: flex-start;
+        }
     }
     &__title {
         font-family: Inter, sans-serif;
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 120%;
+        
+        @include pc {
+        }
+        @include laptop {
+            font-size: 1rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            margin-bottom: 1.5rem;
+        }
     }
     // .projects__item
     &__item {
@@ -622,10 +1031,33 @@ main {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            padding: 1.2rem 3rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            padding: 1rem .4rem;
+        }
     }
     // .projects__img
     &__img {
         height: 7rem;
+        
+        @include pc {
+        }
+        @include laptop {
+            height: 6rem;
+        }
+        @include tablet {
+        }
+        @include mobile {
+            height: 4rem;
+            padding: .5rem;
+        }
     }
     // .projects__descriptor
     &__descriptor {
